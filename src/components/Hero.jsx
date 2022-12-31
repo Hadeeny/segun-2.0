@@ -12,20 +12,19 @@ const Hero = () => {
 
         <h2
           className="text-gray-200 text-[2.1rem] leading-[2.4rem] md:text-[5rem] 
-        max-w-sm md:max-w-4xl md:leading-[5rem]"
+        max-w-sm md:max-w-4xl md:leading-[5rem] font-semibold"
         >
           Unrivalled{" "}
-          <span className="bg-clip-text text-transparent font-bold bg-gradient-to-r from-primary to-violet-200">
+          <span className="bg-clip-text text-transparent font-extrabold 
+          bg-gradient-to-r from-primary to-violet-200">
             creativity
           </span>{" "}
           is just the begining
         </h2>
       </div>
 
-      <p className="max-w-full md:max-w-xl text-xl">
-        I’m a software engineer specializing in building (and occasionally
-        designing) exceptional digital experiences. Currently, I’m focused on
-        building accessible, human-centered products at Upstatement.
+      <p className="max-w-max text-gray-200 mt-6 md:max-w-xl text-xl">
+        I’m a software engineer specialized in building fast, responsive & exceptional digital experiences
       </p>
       <div className="leading-[7rem]">
         <a
