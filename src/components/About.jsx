@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <section
-      className="w-10/12 text-white h-screen flex flex-col 
+      className="w-10/12 text-secondary h-screen flex flex-col 
          items-start gap-y-2 md:gap-y-6 mx-auto"
     >
       <div className="mt-[4rem] flex items-center w-full">
@@ -9,7 +9,7 @@ const About = () => {
         <div className="text-[1.5rem] font-bold px-2 min-w-max">
           <h2>About Me</h2>
         </div>
-        <div className="h-[0.2rem] w-full bg-primary"></div>
+        <div className="h-[0.2rem] bg-secondary w-full"></div>
       </div>
       <div className="py-8">
         <p className="max-w-xl text-xl">

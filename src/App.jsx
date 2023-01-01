@@ -1,11 +1,15 @@
-import About from "./components/About"
-import Hero from "./components/Hero"
+// import About from "./components/About"
+import Entrance from "./components/Entrance"
+// import Hero from "./components/Hero"
+// import Projects from "./components/Projects"
 
 function App() {
   return (
     <div>
-      <Hero/>
+      <Entrance/>
+      {/* <Hero/>
       <About/>
+      <Projects/> */}
     </div>
   )
 }
