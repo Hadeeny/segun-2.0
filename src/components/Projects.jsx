@@ -20,9 +20,11 @@ const Projects = () => {
           bg-no-repeat bg-primary  
         w-full bg-cover bg-center bg-[url(./assets/crappo.JPG)]"
         ></div>
-        <div className="md:w-1/2 w-full lg:ml-[-5rem] ml-0 z-[10] flex flex-col justify-center gap-y-4 items-end h-[20rem]">
+        <div className="md:w-1/2 w-full lg:ml-[-5rem] ml-0 z-[10] flex flex-col justify-center gap-y-2 md:gap-y-4 items-end h-[20rem]">
           <div className="text-primary">Featured project</div>
-          <div className="text-[2rem]">Proshop app</div>
+          <div className="text-xl font-semibold md:text-[2rem]">
+            Proshop app
+          </div>
           <div className="w-full p-6  bg-[#112240] text-right rounded-lg">
             dflkj alkjfa ;lsdfj a;lkfd alkjdsafl;k aslk askjdf dkj da;lkj asdflj
             asdflkjsadfakj
@@ -44,7 +46,9 @@ const Projects = () => {
         ></div>
         <div className="md:w-1/2 w-full md:mr-[-5rem] mr-0 z-[10] flex flex-col justify-center gap-y-4 h-[20rem]">
           <div className="text-primary">Featured project</div>
-          <div className="text-[2rem]">Proshop app</div>
+          <div className="text-xl font-semibold md:text-[2rem]">
+            Proshop app
+          </div>
           <div className="w-full p-6  bg-[#112240] rounded-lg">
             dflkj alkjfa ;lsdfj a;lkfd al[#112240]fl;k aslk askjdf dkj da;lkj
             asdflj asdflkjsadfakj

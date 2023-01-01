@@ -52,7 +52,7 @@ const Hero = () => {
       transition={{delay:11.8, duration:1}}
       initial={{opacity:0, y:50}}
       animate={{opacity:1, y:0}}
-      className="leading-[7rem] relative group">
+      className="leading-[7rem] relative group-disabled: md:group">
         <div className='h-0 group:group-hover:p-8 group-hover:h-[3.7rem] 
         group-hover:w-full duration-300 absolute w-0 top-6 bg-primary'/>
         <a
