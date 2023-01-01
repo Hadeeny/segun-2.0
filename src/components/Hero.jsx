@@ -9,16 +9,16 @@ const Hero = () => {
       transition={{delay:9, duration:2.5}}
       initial={{opacity:0}}
       animate={{opacity:1}}
-      className="text-primary text-2xl">Hi, my name is</motion.h2>
+      className="text-primary text-xl">Hi, my name is</motion.h2>
       <motion.div 
       // transition={{delay:14, duration:1}}
       // initial={{opacity:0}}
       // animate={{opacity:1}}
       className="space-y-4 md:space-y-6">
         <motion.h1 
-        transition={{delay:11.5, duration:1.5}}
-        initial={{opacity:0, y:20}}
-        animate={{opacity:1, y:0}}
+        transition={{delay:11.5, duration:2.5}}
+        initial={{opacity:0}}
+        animate={{opacity:1}}
         className="text-white text-[2.1rem] leading-[2.2rem] md:text-[5rem] font-semibold">
           Oluwasegun Adeniyi
         </motion.h1>
@@ -45,17 +45,19 @@ const Hero = () => {
       initial={{opacity:0, y:-50}}
       animate={{opacity:1, y:0}}
       
-      className="max-w-max text-gray-200 mt-6 md:max-w-xl text-xl">
+      className="max-w-max text-gray-200 mt-6 md:max-w-xl text-lg md:text-xl">
         I’m a software engineer specialized in building fast, responsive & exceptional digital experiences
       </motion.p>
       <motion.div 
       transition={{delay:11.8, duration:1}}
       initial={{opacity:0, y:50}}
       animate={{opacity:1, y:0}}
-      className="leading-[7rem]">
+      className="leading-[7rem] relative group">
+        <div className='h-0 group:group-hover:p-8 group-hover:h-[3.7rem] 
+        group-hover:w-full duration-300 absolute w-0 top-6 bg-primary'/>
         <a
-          href="projects"
-          className="px-[4rem] md:px-[8rem] py-4 border-2 text-xl tracking-[0.4rem] border-primary text-primary"
+          href="#projects"
+          className="px-[2rem] md:px-[6rem] relative z-10 duration-300 hover:text-white py-2 md:py-4 border-2 text-xl tracking-[0.4rem] border-primary text-primary"
         >
           Projects
         </a>
