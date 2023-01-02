@@ -21,7 +21,7 @@ const Projects = () => {
         <div className="text-[1.5rem] font-bold px-2 min-w-max">
           <h2>Some stuffs I made</h2>
         </div>
-        <div className="h-[0.2rem] bg-secondary w-full"></div>
+        <div className="h-[0.2rem] bg-[#bae67e] w-full"></div>
       </div>
       {/* project */}
       {myProjects.map((project, i) => {
@@ -47,10 +47,10 @@ const Projects = () => {
               <div className="h-full w-[3px] absolute top-0 right-0 group-hover:left-0 bg-primary" />
             </div>
             <div
-              className={`md:w-1/2 absolute md:static w-10/12 px-4 md:px-0 lg:ml-[-5rem] 
-              ml-0 z-[10] flex flex-col justify-center gap-y-4 items-start ${switchRow(
+              className={`md:w-1/2 absolute md:static w-10/12 px-4 py-2 md:px-0 lg:ml-[-5rem] 
+              ml-0 z-[10] flex flex-col justify-end bg-black/40 md:bg-transparent gap-y-4 items-start ${switchRow(
                 i
-              )} ${i % 2 === 0 ? "md:items-end" : "md:items-start"} h-[20rem]`}
+              )} ${i % 2 === 0 ? "md:items-end" : "md:items-start"} h-[18rem]`}
             >
               <div>
                 <div className="text-primary">Featured project</div>
@@ -59,7 +59,7 @@ const Projects = () => {
                 </div>
               </div>
               <div
-                className={`w-full md:block hidden p-0 md:p-6 bg-transparent text-gray-200 md:border-2 md:bg-black/40 md:backdrop-blur-xl md:border-primary ${
+                className={`w-full md:block hidden p-0 md:p-6 bg-transparent text-gray-200 md:border-2 md:bg-[#2F3B54]/20 md:backdrop-blur-xl md:border-primary ${
                   i % 2 === 0 ? "md:text-right" : "md:text-left"
                 } rounded-md`}
               >
@@ -67,28 +67,28 @@ const Projects = () => {
                 asdflj asdflkjsadfakj dflkj alkjfa
               </div>
               <ul className="flex justify-start md:justify-end text-sm space-x-2">
-                <li className="px-2 py-1 text-black text-[12px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary bg-primary">
+                <li className="px-2 py-1 text-black text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary bg-primary">
                   React
                 </li>
-                <li className="px-2 py-1 text-black text-[12px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary bg-primary">
+                <li className="px-2 py-1 text-black text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary bg-primary">
                   Nodejs
                 </li>
-                <li className="px-2 py-1 text-black text-[12px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary bg-primary">
+                <li className="px-2 py-1 text-black text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary bg-primary">
                   Express
                 </li>
-                <li className="px-2 py-1 text-black text-[12px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary bg-primary">
+                <li className="px-2 py-1 text-black text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary bg-primary">
                   Redux
                 </li>
-                <li className="px-2 py-1 text-black text-[12px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary bg-primary">
+                <li className="px-2 py-1 text-black text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary bg-primary">
                   MongoDB
                 </li>
               </ul>
               <div className="flex space-x-2">
                 <a aria-label="open page" href={`${project.link}`}>
-                  <RiGithubLine size={30} />
+                  <RiGithubLine size={30} color={"#ef6b73"} />
                 </a>
                 <a aria-label="view code" href={`${project.link}`}>
-                  <MdOutlineOpenInNew size={30} />
+                  <MdOutlineOpenInNew size={30} color={"#bae67e"} />
                 </a>
               </div>
             </div>

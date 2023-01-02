@@ -36,7 +36,7 @@ const Entrance = () => {
         transition={{ duration: 2, delay: 3, ease: "easeIn" }}
         className={`w-full ${
           !showEntranceAnimation && "hidden"
-        } h-screen fixed top-0 left-0 bg-red-400`}
+        } h-screen fixed top-0 left-0 bg-["#bae67e"]`}
       />
       <motion.div 
             className={`fixed ${!showLoading && 'hidden'} text-white flex text-2xl tracking-[0.3rem] top-[50%] justify-center left-0 right-0 mx-auto`}>

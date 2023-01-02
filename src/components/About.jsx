@@ -9,7 +9,7 @@ const About = () => {
         <div className="text-[1.5rem] font-bold px-2 min-w-max">
           <h2>About Me</h2>
         </div>
-        <div className="h-[0.2rem] bg-secondary w-full"></div>
+        <div className="h-[0.2rem] bg-[#bae67e] w-full"></div>
       </div>
       <div className="py-8">
         <p className="max-w-xl text-xl">
