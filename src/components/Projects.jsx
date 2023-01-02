@@ -1,5 +1,5 @@
 import { myProjects } from "../data/projectsData";
-
+import musica from "../assets/musica.jpg";
 const Projects = () => {
   const switchProject = (index) => {
     return index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse";
@@ -32,7 +32,7 @@ const Projects = () => {
             {console.log(project)}
             <div className="w-full group md:w-1/2 relative">
               <div className=" w-full h-[18rem] md:h-[22rem]">
-                <img className="w-full h-full object-cover" />
+                <img src={musica} className="w-full h-full object-cover" />
               </div>
               <div
                 className="absolute top-0 group-hover:w-0 duration-500 h-full 
