@@ -8,7 +8,7 @@ const Entrance = () => {
     }, 10000);
     setTimeout(() => {
       setShowLoading(false);
-    }, 5000);
+    }, 2000);
   }, []);
   const [showEntranceAnimation, setShowEntranceAnimation] = useState(true);
   const [showLoading, setShowLoading] = useState(true)
@@ -39,8 +39,8 @@ const Entrance = () => {
         } h-screen fixed top-0 left-0 bg-red-400`}
       />
       <motion.div 
-            className={`fixed ${!showLoading && 'hidden'} text-black flex text-2xl tracking-[0.3rem] top-[50%] justify-center left-0 right-0 mx-auto`}>
-        <motion.div
+            className={`fixed ${!showLoading && 'hidden'} text-white flex text-2xl tracking-[0.3rem] top-[50%] justify-center left-0 right-0 mx-auto`}>
+        {/* <motion.div
         initial={{x:700, opacity:1}}
         animate={{x:0, opacity:1}}
         transition={{duration:1.2, delay:1.2}}
@@ -89,7 +89,8 @@ const Entrance = () => {
         initial={{x:'700', opacity:1}}
         animate={{x:0, opacity:1}}
         transition={{duration:1.2, delay:3.9}}
-        >.</motion.div>
+        >.</motion.div> */}
+        <div>Loading...</div>
       </motion.div>
       <Screens />
     </motion.section>
