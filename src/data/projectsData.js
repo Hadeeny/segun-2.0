@@ -36,7 +36,7 @@ export const myProjects = [
       Lorem ipsum dolor sit amet consectetur adipisicing elit.
       Nobis illo ratione ullam sequi culpa id ipsa ut labore esse,
       quod dolores provident accusamus modi molestias soluta!
-      Ullam, rerum quisquam? Ad.`,
+      Ullam, rerum quisquam? bam bamd.`,
     image: "artsy1.jpg",
   },
   {
