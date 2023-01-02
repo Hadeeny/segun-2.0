@@ -1,5 +1,5 @@
 import musica from "../assets/musica.jpg";
-import artsy from "../assets/artsy1.jpg";
+import artsy from "../assets/artsy.jpg";
 import crappo from "../assets/crappo.jpg";
 import proshop from "../assets/proshop1.jpg";
 export const myProjects = [
