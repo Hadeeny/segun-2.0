@@ -1,7 +1,4 @@
-import musica from "../assets/musica.jpg";
-import artsy from "../assets/artsy3.png";
-import crappo from "../assets/crappo.jpg";
-import proshop from "../assets/proshop1.jpg";
+import musica from "../image/ebru.jpg";
 export const myProjects = [
   {
     title: "Music web app",

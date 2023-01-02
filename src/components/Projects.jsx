@@ -1,6 +1,4 @@
 import { myProjects } from "../data/projectsData";
-import giticon from "../assets/github1.svg";
-import linkicon from "../assets/link.svg";
 import { RiGithubLine } from "react-icons/ri";
 import { MdOutlineOpenInNew } from "react-icons/md";
 import { IconContext } from "react-icons";
