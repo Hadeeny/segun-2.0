@@ -8,7 +8,7 @@ const Screens = () => {
         transition={{delay: 5, duration:2}}
         initial={{x:'-100%'}}
         animate={{x: 0}}
-        className='relative bg-[#0A192F] z-[900] top-0 left-0'>
+        className='relative z-[900] bg-[#191919] top-0 left-0'>
             <Hero/>
             <About/>
             <Projects/>
