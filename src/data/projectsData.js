@@ -1,4 +1,6 @@
-import musica from "../image/ebru.jpg";
+import artsy from "../image/artsy3.jpg";
+import crappo from "../image/crappo.jpg";
+import proshop from "../image/proshop1.jpg";
 export const myProjects = [
   {
     title: "Music web app",
@@ -8,7 +10,7 @@ export const myProjects = [
         Nobis illo ratione ullam sequi culpa id ipsa ut labore esse,
         quod dolores provident accusamus modi molestias soluta!
         Ullam, rerum quisquam? Ad.`,
-    image: musica,
+    image: artsy,
   },
   {
     title: "Artsy store",
@@ -18,7 +20,7 @@ export const myProjects = [
         Nobis illo ratione ullam sequi culpa id ipsa ut labore esse,
         quod dolores provident accusamus modi molestias soluta!
         Ullam, rerum quisquam? bam bamd.`,
-    image: musica,
+    image: artsy,
   },
   {
     title: "Proshop e-commerce",
@@ -28,7 +30,7 @@ export const myProjects = [
         Nobis illo ratione ullam sequi culpa id ipsa ut labore esse,
         quod dolores provident accusamus modi molestias soluta!
         Ullam, rerum quisquam? Ad.`,
-    image: musica,
+    image: proshop,
   },
   {
     title: "Crappo cryto",
@@ -38,7 +40,7 @@ export const myProjects = [
         Nobis illo ratione ullam sequi culpa id ipsa ut labore esse,
         quod dolores provident accusamus modi molestias soluta!
         Ullam, rerum quisquam? Ad.`,
-    image: musica,
+    image: crappo,
   },
   {
     title: "Webisoft clone",
@@ -48,6 +50,6 @@ export const myProjects = [
         Nobis illo ratione ullam sequi culpa id ipsa ut labore esse,
         quod dolores provident accusamus modi molestias soluta!
         Ullam, rerum quisquam? Ad.`,
-    image: musica,
+    image: artsy,
   },
 ];
