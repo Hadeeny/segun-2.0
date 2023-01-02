@@ -19,7 +19,7 @@ const Hero = () => {
         transition={{delay:11.5, duration:2.5}}
         initial={{opacity:0}}
         animate={{opacity:1}}
-        className="text-white text-[2.1rem] leading-[2.2rem] md:text-[5rem] font-semibold">
+        className="text-white animation-ping text-[2.1rem] leading-[2.2rem] md:text-[5rem] font-semibold">
           Oluwasegun Adeniyi
         </motion.h1>
 
@@ -35,14 +35,14 @@ const Hero = () => {
           bg-gradient-to-r from-primary to-primary">
             creativity
           </span>{" "}
-          is just the begining
+          is just the <span className='animate-glow'>begining</span>
         </motion.h2>
       </motion.div>
 
       <motion.p 
       
       transition={{delay:11.8, duration:1}}
-      initial={{opacity:0, y:-50}}
+      initial={{opacity:0, y:-20}}
       animate={{opacity:1, y:0}}
       
       className="max-w-max text-gray-200 mt-6 md:max-w-xl text-lg md:text-xl">

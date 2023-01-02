@@ -16,20 +16,23 @@ const Projects = () => {
       </div>
       <div className="flex my-8 flex-col w-full items-center justify-center md:flex-row">
         <div
-          className="md:w-1/2 p-[6rem] md:p-[10rem]
-          bg-no-repeat bg-primary  
+          className="md:w-1/2 relative md:static p-[8rem] md:border-none md:p-[10rem]
+          bg-no-repeat bg-yellow-500/50 backdrop-blur-md
         w-full bg-cover bg-center bg-[url(./assets/crappo.JPG)]"
         ></div>
-        <div className="md:w-1/2 w-full lg:ml-[-5rem] ml-0 z-[10] flex flex-col justify-center gap-y-2 md:gap-y-4 items-end h-[20rem]">
+        <div
+          className="md:w-1/2 absolute md:static w-10/12 px-4  md:px-0 lg:ml-[-5rem] 
+        ml-0 z-[10] flex flex-col justify-center gap-y-2 md:gap-y-4 items-start md:items-end h-[20rem]"
+        >
           <div className="text-primary">Featured project</div>
           <div className="text-xl font-semibold md:text-[2rem]">
             Proshop app
           </div>
-          <div className="w-full p-6  bg-[#112240] text-right rounded-lg">
+          <div className="w-full p-0 md:p-6 bg-transparent md:bg-[#112240] md:text-right rounded-lg">
             dflkj alkjfa ;lsdfj a;lkfd alkjdsafl;k aslk askjdf dkj da;lkj asdflj
             asdflkjsadfakj
           </div>
-          <ul className="flex space-x-6">
+          <ul className="flex space-between w-full">
             <li>React</li>
             <li>Nodejs</li>
             <li>Express</li>
@@ -41,7 +44,7 @@ const Projects = () => {
       </div>
       <div className="flex my-8 flex-col w-full items-center justify-center md:flex-row-reverse">
         <div
-          className="md:w-1/2 p-[6rem] md:p-[10rem] bg-no-repeat bg-primary opacity-90 
+          className="md:w-1/2 p-[8rem] md:p-[10rem] bg-no-repeat bg-primary opacity-90 
         w-full bg-cover bg-center bg-[url(./assets/proshop1.JPG)]"
         ></div>
         <div className="md:w-1/2 w-full md:mr-[-5rem] mr-0 z-[10] flex flex-col justify-center gap-y-4 h-[20rem]">
