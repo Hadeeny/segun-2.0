@@ -1,6 +1,4 @@
-import proshop from "../assets/artsy1.jpg";
 import { myProjects } from "../data/projectsData";
-import artsy from "../assets/artsy1.jpg";
 
 const Projects = () => {
   const switchProject = (index) => {
@@ -34,7 +32,7 @@ const Projects = () => {
             {console.log(project)}
             <div className="w-full group md:w-1/2 relative">
               <div className=" w-full h-[18rem] md:h-[22rem]">
-                <img src={artsy} className="w-full h-full object-cover" />
+                <img className="w-full h-full object-cover" />
               </div>
               <div
                 className="absolute top-0 group-hover:w-0 duration-500 h-full 
