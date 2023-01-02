@@ -21,7 +21,7 @@ export const myProjects = [
         Nobis illo ratione ullam sequi culpa id ipsa ut labore esse,
         quod dolores provident accusamus modi molestias soluta!
         Ullam, rerum quisquam? bam bamd.`,
-    image: artsy,
+    image: musica,
   },
   {
     title: "Proshop e-commerce",
@@ -31,7 +31,7 @@ export const myProjects = [
         Nobis illo ratione ullam sequi culpa id ipsa ut labore esse,
         quod dolores provident accusamus modi molestias soluta!
         Ullam, rerum quisquam? Ad.`,
-    image: proshop,
+    image: musica,
   },
   {
     title: "Crappo cryto",
@@ -41,7 +41,7 @@ export const myProjects = [
         Nobis illo ratione ullam sequi culpa id ipsa ut labore esse,
         quod dolores provident accusamus modi molestias soluta!
         Ullam, rerum quisquam? Ad.`,
-    image: crappo,
+    image: musica,
   },
   {
     title: "Webisoft clone",
