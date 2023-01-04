@@ -1,12 +1,29 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { useForm } from "react-hook-form";
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const submitHandler = (e) => {
-    e.preventDefault();
-    alert(`Hello ${name}, email: ${email}, message: ${message}`);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const form = useRef();
+  const submitHandler = (data) => {
+    emailjs
+      .sendForm(
+        "service_i29av13",
+        "template_wzidt6c",
+        form.current,
+        "3auW9BVfFWcZ1hPrn"
+      )
+      .then(
+        (result) => {
+          console.log("successful", result);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
   return (
     <section
@@ -21,14 +38,16 @@ const Contact = () => {
         <div className="h-[0.2rem] bg-[#bae67e] w-full"></div>
       </div>
       <form
-        onSubmit={submitHandler}
+        ref={form}
+        onSubmit={handleSubmit(submitHandler)}
         className=" space-y-5 mt-[3rem] w-full md:w-1/2"
       >
         <div className="flex flex-col gap-y-2">
           <label>Name</label>
           <input
             required
-            onChange={(e) => setName(e.target.value)}
+            {...register("from_name")}
+            // onChange={(e) => setName(e.target.value)}
             className="outline-none rounded border border-primary bg-transparent p-2"
             type="text"
             placeholder="enter your name"
@@ -38,7 +57,8 @@ const Contact = () => {
           <label>Email</label>
           <input
             required
-            onChange={(e) => setEmail(e.target.value)}
+            {...register("reply_to")}
+            // onChange={(e) => setEmail(e.target.value)}
             className="outline-none rounded border border-primary bg-transparent p-2"
             type="email"
             placeholder="enter your email"
@@ -47,8 +67,9 @@ const Contact = () => {
         <div className="flex flex-col gap-y-2">
           <label>Message</label>
           <input
+            {...register("message")}
             required
-            onChange={(e) => setMessage(e.target.value)}
+            // onChange={(e) => setMessage(e.target.value)}
             className="outline-none rounded border border-primary bg-transparent p-2"
             type="text"
             placeholder="drop a message"

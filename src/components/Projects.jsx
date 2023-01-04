@@ -68,19 +68,19 @@ const Projects = () => {
                 asdflj asdflkjsadfakj dflkj alkjfa
               </div>
               <ul className="flex justify-start md:justify-end text-sm space-x-2">
-                <li className="p-0 md:px-2 md:py-1 text-primary text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary ">
+                <li className="p-0 md:px-2 md:py-1 text-leMon text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary ">
                   React
                 </li>
-                <li className="p-0 md:px-2 md:py-1 text-primary text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary">
+                <li className="p-0 md:px-2 md:py-1 text-leMon text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary">
                   Nodejs
                 </li>
-                <li className="p-0 md:px-2 md:py-1 text-primary text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary">
+                <li className="p-0 md:px-2 md:py-1 text-leMon text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary">
                   Express
                 </li>
-                <li className="p-0 md:px-2 md:py-1 text-primary text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary">
+                <li className="p-0 md:px-2 md:py-1 text-leMon text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary">
                   Redux
                 </li>
-                <li className="p-0 md:px-2 md:py-1 text-primary text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary">
+                <li className="p-0 md:px-2 md:py-1 text-leMon text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary">
                   MongoDB
                 </li>
               </ul>
