@@ -1,6 +1,7 @@
 import artsy from "../image/artsy3.jpg";
 import crappo from "../image/crappo.jpg";
 import proshop from "../image/proshop1.jpg";
+import musica from "../image/Home.jpg";
 export const myProjects = [
   {
     title: "Music web app",
@@ -10,7 +11,7 @@ export const myProjects = [
         Nobis illo ratione ullam sequi culpa id ipsa ut labore esse,
         quod dolores provident accusamus modi molestias soluta!
         Ullam, rerum quisquam? Ad.`,
-    image: artsy,
+    image: musica,
   },
   {
     title: "Artsy store",
