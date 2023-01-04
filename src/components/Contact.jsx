@@ -6,8 +6,10 @@ const Contact = () => {
     register,
     handleSubmit,
     formState: { errors },
+    resetField,
   } = useForm();
   const form = useRef();
+
   const submitHandler = (data) => {
     emailjs
       .sendForm(
@@ -24,6 +26,9 @@ const Contact = () => {
           console.log(error.text);
         }
       );
+    resetField("message");
+    resetField("from_name");
+    resetField("reply_to");
   };
   return (
     <section
@@ -46,7 +51,7 @@ const Contact = () => {
           <label>Name</label>
           <input
             required
-            {...register("from_name")}
+            {...register("from_name", { required: true })}
             // onChange={(e) => setName(e.target.value)}
             className="outline-none rounded border border-primary bg-transparent p-2"
             type="text"
@@ -57,7 +62,7 @@ const Contact = () => {
           <label>Email</label>
           <input
             required
-            {...register("reply_to")}
+            {...register("reply_to", { required: true })}
             // onChange={(e) => setEmail(e.target.value)}
             className="outline-none rounded border border-primary bg-transparent p-2"
             type="email"
@@ -66,8 +71,8 @@ const Contact = () => {
         </div>
         <div className="flex flex-col gap-y-2">
           <label>Message</label>
-          <input
-            {...register("message")}
+          <textarea
+            {...register("message", { required: true })}
             required
             // onChange={(e) => setMessage(e.target.value)}
             className="outline-none rounded border border-primary bg-transparent p-2"
@@ -76,7 +81,7 @@ const Contact = () => {
           />
         </div>
         <input
-          className="bg-leMon px-6 rounded cursor-pointer text-[#202838] py-2"
+          className="bg-leMon w-full md:w-1/3 h-[3rem] rounded cursor-pointer text-[#202838]"
           type="submit"
         />
       </form>
