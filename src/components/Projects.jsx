@@ -13,7 +13,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-10/12 text-secondary h-screen flex flex-col 
+      className="w-10/12 text-secondary flex flex-col 
         items-start gap-y-2 md:gap-y-6 mx-auto"
     >
       <div className="mt-[4rem] flex items-center w-full">
@@ -32,7 +32,6 @@ const Projects = () => {
               i
             )}`}
           >
-            {console.log(project)}
             <div className="w-full group md:w-1/2 relative">
               <div className=" w-full h-[18rem] md:h-[22rem]">
                 <img
@@ -50,7 +49,9 @@ const Projects = () => {
               className={`md:w-1/2 absolute md:static w-10/12 px-4 py-2 md:px-0 lg:ml-[-5rem] 
               ml-0 z-[10] flex flex-col justify-end bg-black/40 md:bg-transparent gap-y-4 items-start ${switchRow(
                 i
-              )} ${i % 2 === 0 ? "md:items-end" : "md:items-start"} h-[18rem]`}
+              )} ${
+                i % 2 === 0 ? "md:items-end md:text-right" : "md:items-start"
+              } h-[18rem]`}
             >
               <div>
                 <div className="text-primary">Featured project</div>
@@ -67,19 +68,19 @@ const Projects = () => {
                 asdflj asdflkjsadfakj dflkj alkjfa
               </div>
               <ul className="flex justify-start md:justify-end text-sm space-x-2">
-                <li className="px-2 py-1 text-black text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary bg-primary">
+                <li className="p-0 md:px-2 md:py-1 text-primary text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary ">
                   React
                 </li>
-                <li className="px-2 py-1 text-black text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary bg-primary">
+                <li className="p-0 md:px-2 md:py-1 text-primary text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary">
                   Nodejs
                 </li>
-                <li className="px-2 py-1 text-black text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary bg-primary">
+                <li className="p-0 md:px-2 md:py-1 text-primary text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary">
                   Express
                 </li>
-                <li className="px-2 py-1 text-black text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary bg-primary">
+                <li className="p-0 md:px-2 md:py-1 text-primary text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary">
                   Redux
                 </li>
-                <li className="px-2 py-1 text-black text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary bg-primary">
+                <li className="p-0 md:px-2 md:py-1 text-primary text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary">
                   MongoDB
                 </li>
               </ul>

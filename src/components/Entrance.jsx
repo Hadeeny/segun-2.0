@@ -17,7 +17,7 @@ const Entrance = () => {
       <motion.div
         initial={{ x: "-100%" }}
         animate={{ x: 0 }}
-        transition={{ duration: 2, delay: 1, ease: "easeIn" }}
+        transition={{ duration: 2, delay: 1,type:'spring', stiffness: 20, ease: "easeIn" }}
         className={`w-full h-screen ${
           !showEntranceAnimation && "hidden"
         } fixed top-0 left-0 bg-white`}

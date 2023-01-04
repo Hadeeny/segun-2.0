@@ -7,6 +7,8 @@ module.exports = {
         primary: "#FFAE57",
         secondary: "rgb(229, 231, 235)",
         white: "#ffffff",
+        leMon: "#bae67e",
+        rouge: "#ef6b73",
       },
     },
   },

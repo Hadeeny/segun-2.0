@@ -2,6 +2,7 @@ import About from "./About"
 import Hero from "./Hero"
 import Projects from "./Projects"
 import {motion} from 'framer-motion'
+import Contact from "./Contact"
 const Screens = () => {
     return (
         <motion.div 
@@ -12,6 +13,7 @@ const Screens = () => {
             <Hero/>
             <About/>
             <Projects/>
+            <Contact/>
         </motion.div>
     )
 }
