@@ -6,8 +6,8 @@ const Menu = () => {
   return (
     <>
       <div
-        className="w-8/12 fixed top-10 bg-[#202838]/20 border border-leMon 
-      rounded-xl px-4 backdrop-blur-md left-0 right-0 mx-auto flex z-[1400] justify-between items-center py-4"
+        className="w-10/12 fixed top-10 bg-[#202838]/20 border border-leMon 
+      rounded-xl px-4 backdrop-blur-md left-0 right-0 mx-auto flex z-[1400] justify-between items-center md:py-4 py-2"
       >
         <div className="text-secondary  font-bold text-2xl">Deniyi</div>
         <div
