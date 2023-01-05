@@ -41,38 +41,36 @@ const Menu = () => {
             showMenu ? "h-full delay-[1200ms]" : "h-0 delay-[100ms]"
           }`}
         ></div>
-        <AnimatePresence>
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 2 }}
-            className={`fixed top-[25%] flex ${
-              !showMenu && "hidden"
-            } flex-col md:flex-row left-0 right-0 w-10/12 mx-auto z-[1300]`}
-          >
-            <div className="w-1/2">
-              <div className="mb-10 text-sm font-semibold uppercase">
-                Online
-              </div>
+        {/* <AnimatePresence> */}
+        <motion.div
+          // initial={{ opacity: 0, x: 20 }}
+          // animate={{ opacity: 1, x: 0 }}
+          // transition={{ duration: 2 }}
+          className={`fixed top-[25%] flex ${
+            !showMenu && "hidden"
+          } flex-col md:flex-row left-0 delay-[2000ms] right-0 w-10/12 mx-auto z-[1300]`}
+        >
+          <div className="w-1/2">
+            <div className="mb-10 text-sm font-semibold uppercase">Online</div>
+          </div>
+          <div className="w-1/2">
+            <div className="mb-10 text-sm font-semibold uppercase">
+              Navigation
             </div>
-            <div className="w-1/2">
-              <div className="mb-10 text-sm font-semibold uppercase">
-                Navigation
-              </div>
-              <ul className="space-y-4">
-                <li>
-                  <a className="text-[2rem] uppercase">Home</a>
-                </li>
-                <li>
-                  <a className="text-[2rem] uppercase">Project</a>
-                </li>
-                <li>
-                  <a className="text-[2rem] uppercase">Contact</a>
-                </li>
-              </ul>
-            </div>
-          </motion.div>
-        </AnimatePresence>
+            <ul className="space-y-4">
+              <li>
+                <a className="text-[2rem] uppercase">Home</a>
+              </li>
+              <li>
+                <a className="text-[2rem] uppercase">Project</a>
+              </li>
+              <li>
+                <a className="text-[2rem] uppercase">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </motion.div>
+        {/* </AnimatePresence> */}
       </div>
     </>
   );
