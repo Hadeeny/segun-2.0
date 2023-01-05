@@ -28,7 +28,7 @@ const Hero = () => {
           Oluwasegun
         </motion.h1>
 
-        <motion.h2
+        {/* <motion.h2
           transition={{ delay: 4.8, duration: 1 }}
           initial={{ opacity: 0, scale: 0.4, x: 100 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -43,7 +43,7 @@ const Hero = () => {
             creativity
           </span>{" "}
           is just the <span className="">begining</span>
-        </motion.h2>
+        </motion.h2> */}
       </motion.div>
 
       <motion.p

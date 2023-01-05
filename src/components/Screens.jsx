@@ -12,7 +12,7 @@ const Screens = () => {
         initial={{x:'100%'}}
         animate={{x: 0}}
         className='relative z-[900] bg-[#202838] top-0 left-0'>
-            <Menu/>
+            
             <Hero/>
             <About/>
             <Projects/>

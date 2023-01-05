@@ -8,6 +8,7 @@ import Socials from "./components/Socials"
 function App() {
   return (
     <div>
+      <Menu/>
       <Entrance/>
       <Socials/>
     </div>
