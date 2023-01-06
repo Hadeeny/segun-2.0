@@ -4,7 +4,7 @@ import { MdOutlineOpenInNew } from "react-icons/md";
 const Socials = () => {
     return (
         <motion.div
-        // transition={{delay:3, duration: 1}}
+        // transition={{delay:5, duration: 1}}
         // initial={{opacity: 0}}
         // opacity={{opacity: 1}}
         className='hidden fixed z-[900] bottom-0 left-2 bg-transparent w-[2rem] md:flex flex-col items-center'>
