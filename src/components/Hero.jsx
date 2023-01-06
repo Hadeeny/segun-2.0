@@ -47,7 +47,7 @@ const Hero = () => {
           <motion.div
             key={i}
             variants={letterAni}
-            className="text-white text-[4rem] leading-[2.2rem] md:text-[5rem] font-semibold"
+            className="text-white text-[3rem] leading-[2.2rem] md:text-[5rem] font-semibold"
           >
             {letter}
           </motion.div>
