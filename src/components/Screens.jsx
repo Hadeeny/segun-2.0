@@ -15,7 +15,7 @@ const Screens = () => {
             
             <Hero/>
             <About/>
-            <Projects/>
+            {/* <Projects/> */}
             <Contact/>
             
         </motion.div>
