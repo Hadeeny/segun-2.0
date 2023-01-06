@@ -12,7 +12,7 @@ const Hero = () => {
   };
 
   const letterAni = {
-    initial: { opacity: 0, x: 200 },
+    initial: { opacity: 0, x: 600 },
     animate: {
       opacity: 1,
       x: 0,
@@ -26,7 +26,7 @@ const Hero = () => {
     <motion.section
       id="home"
       variants={banner}
-      className="w-10/12 text-white h-screen flex flex-col 
+      className="w-10/12 text-white h-screen snap-center flex flex-col 
     justify-center items-start gap-y-2 md:gap-y-6 mx-auto"
     >
       <motion.h2

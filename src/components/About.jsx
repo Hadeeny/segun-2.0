@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <section
-      className="w-10/12 text-secondary h-screen flex flex-col 
+      className="w-10/12 text-secondary snap-center snap-y snap-mandatory h-screen flex flex-col 
          items-start gap-y-2 md:gap-y-6 mx-auto"
     >
       <div className="mt-[4rem] flex items-center w-full">

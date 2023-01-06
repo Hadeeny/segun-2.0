@@ -11,7 +11,7 @@ const Screens = () => {
         transition={{delay: 4, duration:1}}
         initial={{x:'100%'}}
         animate={{x: 0}}
-        className='relative z-[900] bg-[#202838] top-0 left-0'>
+        className='relative z-[900] snap-y snap-mandatory bg-[#202838] top-0 left-0'>
             
             <Hero/>
             <About/>
