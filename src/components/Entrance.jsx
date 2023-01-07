@@ -25,7 +25,7 @@ const Entrance = () => {
       <motion.div
         initial={{ x: "-100%" }}
         animate={{ x: 0 }}
-        transition={{ duration: 1, delay: 2, ease: "easeIn" }}
+        transition={{ duration: 1.5, delay: 1.3, ease: "easeIn" }}
         className={`w-full ${
           !showEntranceAnimation && "hidden"
         } h-screen fixed top-0 left-0 bg-gray-500`}
@@ -39,7 +39,8 @@ const Entrance = () => {
         } h-screen fixed top-0 left-0 bg-["#bae67e"]`}
       />
       <motion.div 
-            className={`fixed ${!showLoading && 'hidden'} text-white flex text-2xl tracking-[0.3rem] top-[50%] justify-center left-0 right-0 mx-auto`}>
+            className={`fixed ${!showLoading && 'hidden'} text-white text-2xl tracking-[0.3rem] top-[25%] 
+            md:top-[50%] w-8/12 left-0 right-0 mx-auto`}>
         
         <div>Loading...</div>
       </motion.div>

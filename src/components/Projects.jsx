@@ -1,9 +1,34 @@
+import { motion } from "framer-motion";
 import { myProjects } from "../data/projectsData";
 import { RiGithubLine } from "react-icons/ri";
 import { MdOutlineOpenInNew } from "react-icons/md";
 import { IconContext } from "react-icons";
 import { Link as a } from "react-router-dom";
 const Projects = () => {
+  const title = "Some stuffs I made";
+
+  const banner = {
+    animate: {
+      transition: {
+        delayChildren: 0.1,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const letterAni = {
+    initial: { opacity: 0 },
+    animate: {
+      opacity: 1,
+      scale: [1, 1.4, 1, 1.4, 1],
+      transition: {
+        ease: "easeIn",
+        // ease: [0.6, 0.01, -0.05, 0.95, 0.3],
+        duration: 0.7,
+      },
+    },
+  };
+
   const switchProject = (index) => {
     return index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse";
   };
@@ -18,9 +43,18 @@ const Projects = () => {
     >
       <div className="mt-[4rem] flex items-center w-full">
         <div className="text-[1.5rem] text-primary">02.</div>
-        <div className="text-[1.5rem] font-bold px-2 min-w-max">
-          <h2>Some stuffs I made</h2>
-        </div>
+        <motion.div
+          variants={banner}
+          initial="initial"
+          whileInView="animate"
+          className="text-[1.5rem] font-bold px-2 min-w-max"
+        >
+          {title.split("").map((letter, i) => (
+            <motion.span variants={letterAni} key={i}>
+              {letter}
+            </motion.span>
+          ))}
+        </motion.div>
         <div className="h-[0.2rem] bg-[#bae67e] w-full"></div>
       </div>
       {/* project */}
@@ -32,7 +66,12 @@ const Projects = () => {
               i
             )}`}
           >
-            <div className="w-full group md:w-1/2 relative">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5, x: i % 2 == 0 ? 200 : -200 }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              transition={{ duration: 1 }}
+              className="w-full group md:w-1/2 relative"
+            >
               <div className=" w-full h-[18rem] md:h-[22rem]">
                 <img
                   src={project.image}
@@ -44,8 +83,11 @@ const Projects = () => {
                 md:opacity-50 opacity-50 bg-black  md:bg-yellow-900 w-full"
               ></div>
               <div className="h-full w-[3px] absolute top-0 right-0 group-hover:left-0 bg-primary" />
-            </div>
-            <div
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 200 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
               className={`md:w-1/2 absolute md:static w-10/12 px-4 py-2 md:px-0 lg:ml-[-5rem] 
               ml-0 z-[10] flex flex-col justify-end bg-black/40 md:bg-transparent gap-y-4 items-start ${switchRow(
                 i
@@ -92,7 +134,7 @@ const Projects = () => {
                   <MdOutlineOpenInNew size={30} color={"#bae67e"} />
                 </a>
               </div>
-            </div>
+            </motion.div>
           </div>
         );
       })}

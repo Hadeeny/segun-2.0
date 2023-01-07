@@ -1,4 +1,28 @@
+import { motion } from "framer-motion";
 const About = () => {
+  const aboutText = "About Me";
+
+  const banner = {
+    animate: {
+      transition: {
+        delayChildren: 0.1,
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const letterAni = {
+    initial: { opacity: 0 },
+    animate: {
+      opacity: 1,
+      scale: [1, 1.4, 1, 1.4, 1],
+      transition: {
+        ease: "easeIn",
+        // ease: [0.6, 0.01, -0.05, 0.95, 0.3],
+        duration: 0.7,
+      },
+    },
+  };
   return (
     <section
       className="w-10/12 text-secondary snap-center snap-y snap-mandatory h-screen flex flex-col 
@@ -6,10 +30,19 @@ const About = () => {
     >
       <div className="mt-[4rem] flex items-center w-full">
         <div className="text-[1.5rem] text-primary">01.</div>
-        <div className="text-[1.5rem] font-bold px-2 min-w-max">
-          <h2>About Me</h2>
-        </div>
-        <div className="h-[0.2rem] bg-[#bae67e] w-full"></div>
+        <motion.div
+          variants={banner}
+          initial="initial"
+          whileInView="animate"
+          className="text-[1.5rem] font-bold px-2 min-w-max"
+        >
+          {aboutText.split("").map((letter, i) => (
+            <motion.span variants={letterAni} key={i}>
+              {letter}
+            </motion.span>
+          ))}
+        </motion.div>
+        <div className="h-[0.1rem] bg-[#bae67e] w-full"></div>
       </div>
       <div className="py-8">
         <p className="max-w-xl text-xl">

@@ -12,16 +12,29 @@ const Hero = () => {
   };
 
   const letterAni = {
-    initial: { opacity: 0, x: 600 },
+    initial: { opacity: 0 },
     animate: {
       opacity: 1,
-      x: 0,
+      scale: [1, 1.4, 1, 1.4, 1],
       transition: {
+        ease: "easeIn",
         // ease: [0.6, 0.01, -0.05, 0.95, 0.3],
-        duration: 1,
+        duration: 0.7,
       },
     },
   };
+
+  // const letterAni = {
+  //   initial: { opacity: 0, x: 600 },
+  //   animate: {
+  //     opacity: 1,
+  //     x: 0,
+  //     transition: {
+  //       // ease: [0.6, 0.01, -0.05, 0.95, 0.3],
+  //       duration: 1,
+  //     },
+  //   },
+  // };
   return (
     <motion.section
       id="home"
