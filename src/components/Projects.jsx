@@ -67,8 +67,8 @@ const Projects = () => {
             )}`}
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.5, x: i % 2 == 0 ? 200 : -200 }}
-              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              initial={{ opacity: 0, x: i % 2 == 0 ? 20 : -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
               className="w-full group md:w-1/2 relative"
             >

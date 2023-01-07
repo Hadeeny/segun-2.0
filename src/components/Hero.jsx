@@ -46,7 +46,7 @@ const Hero = () => {
         transition={{ delay: 6, duration: 1 }}
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="text-leMon text-xl mb-4 md:text-4xl"
+        className="text-leMon font-oxanium text-xl mb-4 md:text-3xl"
       >
         Hi, my name is
       </motion.h2>
@@ -70,7 +70,7 @@ const Hero = () => {
         transition={{ delay: 7, duration: 0.8 }}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="max-w-max text-gray-200 mt-6 md:max-w-xl text-lg md:text-xl"
+        className="max-w-max font-oxanium text-gray-200 mt-6 md:max-w-xl text-lg md:text-xl"
       >
         I’m a software engineer specialized in building fast, responsive &
         exceptional digital experiences

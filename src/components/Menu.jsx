@@ -21,7 +21,7 @@ const Menu = () => {
         <div
           className={`text-secondary ${
             showMenu && "text-black"
-          } font-bold text-2xl`}
+          } font-bold font-dancing text-3xl`}
         >
           {"<Deniyi/>"}
         </div>
@@ -48,12 +48,7 @@ const Menu = () => {
         </div>
       </motion.div>
       {/* Menui slider */}
-      <motion.div
-        // initial={{ x: 200 }}
-        // whileInView={{ x: 0 }}
-        // transition={{ when: "beforeChildren" }}
-        className="relative w-full h-full"
-      >
+      <motion.div className="relative w-full h-full">
         <div
           className={`bg-leMon fixed top-0 left-0 z-[1200] w-1/4 duration-500 ${
             showMenu ? "h-full" : "h-0 delay-[1200ms]"
@@ -74,17 +69,17 @@ const Menu = () => {
             showMenu ? "h-full delay-[1200ms]" : "h-0 delay-[100ms]"
           }`}
         ></div>
-        {/* <AnimatePresence> */}
         <motion.div
-          initial={{ opacity: 0, x: 200 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 2 }}
-          className={`fixed top-[25%] flex ${
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          // exit={{ y: -100 }}
+          transition={{ duration: 0.8, delay: 1.4 }}
+          className={`fixed top-[25%]  flex ${
             !showMenu && "hidden"
-          } flex-col md:flex-row left-0 delay-[2000ms] right-0 w-10/12 mx-auto z-[1300]`}
+          } flex-col md:flex-row gap-y-20 left-0 right-0 w-10/12 mx-auto z-[1300]`}
         >
-          <div className="w-1/2">
-            <div className="mb-10 text-sm font-semibold uppercase">Online</div>
+          <div className=" w-full space-y-6 md:w-1/2">
+            <div className=" text-sm tracking-[0.3rem] font-semibold uppercase">Online</div>
             <ul className="space-x-2 flex">
               <li>
                 <RiGithubLine size={30} color={"#000000"} />
@@ -100,10 +95,8 @@ const Menu = () => {
               </li>
             </ul>
           </div>
-          <div className="w-1/2">
-            <div className="mb-10 text-sm font-semibold uppercase">
-              Navigation
-            </div>
+          <div className="w-full space-y-6 md:w-1/2">
+            <div className="  text-sm tracking-[0.3rem] font-semibold uppercase">Navigation</div>
             <ul className="space-y-4">
               <li onClick={() => setShowMenu(false)}>
                 <a href="#home" className="text-[2rem] uppercase">
@@ -123,7 +116,6 @@ const Menu = () => {
             </ul>
           </div>
         </motion.div>
-        {/* </AnimatePresence> */}
       </motion.div>
     </>
   );

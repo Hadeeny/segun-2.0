@@ -2,6 +2,10 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      oxanium: ["Oxanium"],
+      dancing: ["Dancing Script"],
+    },
     extend: {
       colors: {
         primary: "#FFAE57",
