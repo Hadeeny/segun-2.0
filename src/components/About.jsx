@@ -12,14 +12,13 @@ const About = () => {
   };
 
   const letterAni = {
-    initial: { opacity: 0 },
+    initial: { opacity: 0, x: 600 },
     animate: {
       opacity: 1,
-      scale: [1, 1.4, 1, 1.4, 1],
+      x: 0,
       transition: {
-        ease: "easeIn",
         // ease: [0.6, 0.01, -0.05, 0.95, 0.3],
-        duration: 0.7,
+        duration: 1,
       },
     },
   };
@@ -34,7 +33,7 @@ const About = () => {
           variants={banner}
           initial="initial"
           whileInView="animate"
-          className="text-[1.5rem] font-bold px-2 min-w-max"
+          className="text-[1.5rem]  font-oxanium font-bold px-2 min-w-max"
         >
           {aboutText.split("").map((letter, i) => (
             <motion.span variants={letterAni} key={i}>

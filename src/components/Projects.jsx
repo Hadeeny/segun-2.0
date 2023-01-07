@@ -17,14 +17,13 @@ const Projects = () => {
   };
 
   const letterAni = {
-    initial: { opacity: 0 },
+    initial: { opacity: 0, x: 600 },
     animate: {
       opacity: 1,
-      scale: [1, 1.4, 1, 1.4, 1],
+      x: 0,
       transition: {
-        ease: "easeIn",
         // ease: [0.6, 0.01, -0.05, 0.95, 0.3],
-        duration: 0.7,
+        duration: 1,
       },
     },
   };
@@ -47,7 +46,7 @@ const Projects = () => {
           variants={banner}
           initial="initial"
           whileInView="animate"
-          className="text-[1.5rem] font-bold px-2 min-w-max"
+          className="text-[1.5rem] font-oxanium font-bold px-2 min-w-max"
         >
           {title.split("").map((letter, i) => (
             <motion.span variants={letterAni} key={i}>
@@ -85,7 +84,7 @@ const Projects = () => {
               <div className="h-full w-[3px] absolute top-0 right-0 group-hover:left-0 bg-primary" />
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, y: 200 }}
+              initial={{ opacity: 0, y: i % 2 == 0 ? 20 : -20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               className={`md:w-1/2 absolute md:static w-10/12 px-4 py-2 md:px-0 lg:ml-[-5rem] 

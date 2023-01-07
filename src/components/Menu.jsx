@@ -104,6 +104,11 @@ const Menu = () => {
                 </a>
               </li>
               <li onClick={() => setShowMenu(false)}>
+                <a href="#about" className="text-[2rem] uppercase">
+                  About
+                </a>
+              </li>
+              <li onClick={() => setShowMenu(false)}>
                 <a href="#projects" className="text-[2rem] uppercase">
                   Project
                 </a>
