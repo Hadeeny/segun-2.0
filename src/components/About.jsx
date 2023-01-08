@@ -1,3 +1,14 @@
+import html from '../image/html-svgrepo-com.svg'
+import css from '../image/css.svg'
+import javascript from '../image/javascript.svg'
+import sass from '../image/sass.svg'
+import framer from '../image/framer.svg'
+import redux from '../image/redux.svg'
+import tailwindcss from '../image/tailwindcss.svg'
+import reactjs from '../image/reactjs.svg'
+import vite from '../image/vite.svg'
+import github from '../image/github.svg'
+import nextjs from '../image/nextjs.svg'
 import { motion } from "framer-motion";
 const About = () => {
   const aboutText = "About Me";
@@ -46,18 +57,48 @@ const About = () => {
       </div>
       <div className="py-8">
         <p className="max-w-xl text-xl">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est eum
-          itaque nihil blanditiis similique tempora, a ab dolor et fugit.
-          Ducimus, dolore. Maxime ipsum possimus veritatis voluptas ut optio
-          aut?
+        I'm a front-end developer from West Africa with a degree in civil engineering.
+        What I have for software development is more of an addiction than a passion, 
+        passion is what I have for music, as I also double as a guitarist. 
+        I've worked with a couple of technologies over the years some of which include but but aren't limited to:
         </p>
         <br />
-        <p className="max-w-xl text-xl">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est eum
-          itaque nihil blanditiis similique tempora, a ab dolor et fugit.
-          Ducimus, dolore. Maxime ipsum possimus veritatis voluptas ut optio
-          aut?
-        </p>
+        <br />
+        <div className='flex space-x-4'>
+          <div className='w-[2rem] h-[2rem]'>
+            <img className='w-full h-full' src={html} />
+          </div>
+          <div className='w-[2rem] h-[2rem]'>
+            <img className='w-full h-full' src={css} />
+          </div>
+          <div className='w-[2rem] h-[2rem]'>
+            <img className='w-full h-full' src={javascript} />
+          </div>
+          <div className='w-[2rem] h-[2rem]'>
+            <img className='w-full h-full' src={sass} />
+          </div>
+          <div className='w-[2rem] h-[2rem]'>
+            <img className='w-full h-full' src={tailwindcss} />
+          </div>
+          <div className='w-[2rem] h-[2rem]'>
+            <img className='w-full h-full' src={reactjs} />
+          </div>
+          <div className='w-[2rem] h-[2rem]'>
+            <img className='w-full h-full' src={github} />
+          </div>
+          <div className='w-[2rem] h-[2rem]'>
+            <img className='w-full h-full' src={framer} />
+          </div>
+          <div className='w-[2rem] h-[2rem]'>
+            <img className='w-full h-full' src={redux} />
+          </div>
+          <div className='w-[2rem] h-[2rem]'>
+            <img className='w-full h-full' src={nextjs} />
+          </div>
+          <div className='w-[2rem] h-[2rem]'>
+            <img className='w-full h-full' src={vite} />
+          </div>
+        </div>
       </div>
     </section>
   );

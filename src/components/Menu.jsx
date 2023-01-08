@@ -1,10 +1,39 @@
-import { RiGithubLine } from "react-icons/ri";
+import { SiGmail } from "react-icons/si";
 import { MdOutlineOpenInNew } from "react-icons/md";
-import { useState } from "react";
+import {FaGithub} from 'react-icons/fa'
+import {ImTwitter} from 'react-icons/im'
+import {GrLinkedinOption} from 'react-icons/gr'
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 const Menu = () => {
+  const [show, setShow] = useState(true)
   const [showMenu, setShowMenu] = useState(false);
-  console.log(showMenu);
+  const [lastScrollY, setLastScrollY] = useState(0)
+  const controlNavbar = () => {
+    if (typeof window !== 'undefined') { 
+      if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
+        setShow(false); 
+      } else { // if scroll up show the navbar
+        setShow(true);  
+      }
+
+      // remember current page location to use in the next move
+      setLastScrollY(window.scrollY); 
+    }
+  };
+
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+
+      // cleanup function
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
+
   return (
     <>
       <motion.div
@@ -16,7 +45,7 @@ const Menu = () => {
             ? "bg-transparent"
             : "bg-[#202838]/20 border border-leMon backdrop-blur-md"
         }  
-        rounded-xl px-4  left-0 right-0 mx-auto flex z-[1400] justify-between items-center md:py-4 py-2`}
+        rounded-xl px-4 ${!show && 'hidden'} left-0 right-0 mx-auto flex z-[1400] justify-between items-center md:py-4 py-2`}
       >
         <div
           className={`text-secondary ${
@@ -76,22 +105,23 @@ const Menu = () => {
           transition={{ duration: 0.8, delay: 1.4 }}
           className={`fixed top-[25%]  flex ${
             !showMenu && "hidden"
-          } flex-col md:flex-row gap-y-20 left-0 right-0 w-10/12 mx-auto z-[1300]`}
+          } flex-col md:flex-row gap-y-12 left-0 right-0 w-10/12 mx-auto z-[1300]`}
         >
           <div className=" w-full space-y-6 md:w-1/2">
             <div className=" text-sm tracking-[0.3rem] font-semibold uppercase">Online</div>
-            <ul className="space-x-2 flex">
+            <ul className="space-x-4 flex">
               <li>
-                <RiGithubLine size={30} color={"#000000"} />
+                <a href='https://github.com/hadeeny' target='_blank' ><FaGithub size={30} color={"#000000"} /></a>
+              </li>
+             
+              <li>
+                <a href='https://linkedin.com/in/segun-deniyi' target='_blank'><GrLinkedinOption size={30} color={"#000000"} /></a>
               </li>
               <li>
-                <MdOutlineOpenInNew size={30} color={"#000000"} />
+                <a href='#contact'><SiGmail size={30} color={"#000000"} /></a>
               </li>
               <li>
-                <RiGithubLine size={30} color={"#000000"} />
-              </li>
-              <li>
-                <MdOutlineOpenInNew size={30} color={"#000000"} />
+                <a target='_blank' href='https://twitter.com/segun_deniyi'><ImTwitter size={30} color={"#000000"} /></a>
               </li>
             </ul>
           </div>

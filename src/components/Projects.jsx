@@ -126,10 +126,10 @@ const Projects = () => {
                 </li>
               </ul>
               <div className="flex space-x-2">
-                <a aria-label="open page" href={`${project.link}`}>
+                <a target='_blank' aria-label="open page" href={`${project.link}`}>
                   <RiGithubLine size={30} color={"#ef6b73"} />
                 </a>
-                <a aria-label="view code" href={`${project.link}`}>
+                <a target='_blank' aria-label="view code" href={`${project.link}`}>
                   <MdOutlineOpenInNew size={30} color={"#bae67e"} />
                 </a>
               </div>
