@@ -25,7 +25,7 @@ const Hero = () => {
   // };
 
   const letterAni = {
-    initial: { opacity: 0, x: 600 },
+    initial: { opacity: 0, x: 500 },
     animate: {
       opacity: 1,
       x: 0,
@@ -60,7 +60,7 @@ const Hero = () => {
           <motion.div
             key={i}
             variants={letterAni}
-            className="text-white text-[3rem] tracking-[0.3rem] leading-[2.2rem] md:text-[5rem] font-oxanium font-semibold"
+            className="text-white text-[2rem] tracking-[0.3rem] leading-[2.2rem] md:text-[5rem] font-oxanium font-semibold"
           >
             {letter}
           </motion.div>

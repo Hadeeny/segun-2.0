@@ -24,6 +24,7 @@ const About = () => {
   };
   return (
     <section
+      id="about"
       className="w-10/12 text-secondary snap-center snap-y snap-mandatory h-screen flex flex-col 
          items-start gap-y-2 md:gap-y-6 mx-auto"
     >
