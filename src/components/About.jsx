@@ -56,15 +56,15 @@ const About = () => {
         <div className="h-[0.1rem] bg-[#bae67e] w-full"></div>
       </div>
       <div className="py-8">
-        <p className="max-w-xl text-xl">
+        <p className="text-xl md:max-w-2xl">
         I'm a front-end developer from West Africa with a degree in civil engineering.
-        What I have for software development is more of an addiction than a passion, 
+        What I have for software development is more of an addiction than a passion,
         passion is what I have for music, as I also double as a guitarist. 
-        I've worked with a couple of technologies over the years some of which include but but aren't limited to:
+        I've worked with a couple of technologies over the years some of which include but aren't limited to:
         </p>
         <br />
         <br />
-        <div className='flex space-x-4'>
+        <div className='flex flex-wrap space-x-4'>
           <div className='w-[2rem] h-[2rem]'>
             <img className='w-full h-full' src={html} />
           </div>
@@ -74,6 +74,7 @@ const About = () => {
           <div className='w-[2rem] h-[2rem]'>
             <img className='w-full h-full' src={javascript} />
           </div>
+          <br/>
           <div className='w-[2rem] h-[2rem]'>
             <img className='w-full h-full' src={sass} />
           </div>
@@ -86,6 +87,7 @@ const About = () => {
           <div className='w-[2rem] h-[2rem]'>
             <img className='w-full h-full' src={github} />
           </div>
+          <br/>
           <div className='w-[2rem] h-[2rem]'>
             <img className='w-full h-full' src={framer} />
           </div>
