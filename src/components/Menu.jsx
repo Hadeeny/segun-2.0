@@ -40,17 +40,15 @@ const Menu = () => {
         transition={{ delay: 9.6, type: "spring", duration: 1 }}
         initial={{ opacity: 0, y: -200 }}
         animate={{ y: 0, opacity: 1 }}
-        className={`w-10/12 fixed top-10  ${
-          showMenu
-            ? "bg-transparent"
-            : "bg-[#202838]/20 border border-leMon backdrop-blur-md"
-        }  
-        rounded-xl px-4 ${!show && 'hidden'} left-0 right-0 mx-auto flex z-[1400] justify-between items-center md:py-4 py-2`}
+        className={`w-10/12 fixed top-10    
+        rounded-xl px-4 
+        ${!show && 'hidden'}
+         left-0 right-0 mx-auto flex z-[1400] justify-between items-center md:py-4 py-2`}
       >
         <div
           className={`text-secondary ${
             showMenu && "text-black"
-          } font-bold font-dancing text-3xl`}
+          } font-bold font-dancing text-xl`}
         >
           {"<Deniyi/>"}
         </div>

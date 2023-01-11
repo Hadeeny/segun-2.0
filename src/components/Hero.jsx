@@ -76,8 +76,8 @@ const Hero = () => {
         exceptional digital experiences
       </motion.p>
       <motion.div
-        transition={{ delay: 7.4, duration: 0.8 }}
-        initial={{ opacity: 0, y: 20 }}
+        transition={{ delay: 8, duration: 0.8 }}
+        initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
         className="leading-[7rem] relative group-disabled: md:group"
       >
