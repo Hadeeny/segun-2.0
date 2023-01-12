@@ -22,7 +22,7 @@ const Entrance = () => {
         duration: 1,
       },
     },
-    exit: {opacity:0, x:-300}
+    // exit: {opacity:0, x:-300}
   };
   useEffect(() => {
     setTimeout(() => {
@@ -68,7 +68,6 @@ const Entrance = () => {
           !showEntranceAnimation && "hidden"
         } h-screen fixed z-[100] top-0 right-0 left-0 bg-orange-300`}
       />
-      <AnimatePresence>
       <motion.div
         variants={banner}
         initial="initial"
@@ -79,6 +78,7 @@ const Entrance = () => {
         {title.split("").map((letters, i) => (
           <motion.span
             variants={letterAni}
+            exit={{ x: 570, transition: { duration: 0.5 } }}
             // exit={{x:-300, opacity:0}}
             key={i}
             className="text-secondary tracking-[0.5rem] text-center 
@@ -88,7 +88,6 @@ const Entrance = () => {
           </motion.span>
         ))}
       </motion.div>
-      </AnimatePresence>
       {/* <Screens /> */}
     </motion.section>
   );
