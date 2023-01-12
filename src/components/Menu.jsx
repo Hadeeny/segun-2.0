@@ -113,7 +113,7 @@ const Menu = () => {
               </li>
              
               <li>
-                <a href='https://linkedin.com/in/segun-deniyi' target='_blank'><GrLinkedinOption size={30} color={"#000000"} /></a>
+                <a href='https://linkedin.com/in/segundeniyi' target='_blank'><GrLinkedinOption size={30} color={"#000000"} /></a>
               </li>
               <li>
                 <a href='#contact'><SiGmail size={30} color={"#000000"} /></a>

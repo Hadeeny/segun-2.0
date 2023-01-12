@@ -38,14 +38,21 @@ const Hero = () => {
   return (
     <motion.section
       id="home"
-      variants={banner}
       className="w-10/12 text-white h-screen snap-center flex flex-col 
     justify-center items-start gap-y-2 md:gap-y-6 mx-auto"
     >
       <motion.h2
         transition={{ delay: 5, duration: 1 }}
-        initial={{ y: 80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        // initial={{ y: 80, opacity: 0 }}
+        // animate={{ y: 0, opacity: 1 }}
+        initial={{
+          y: 50,
+          clipPath: "polygon(0 0, 0% 0, 0% 0%, 0% 0%)",
+        }}
+        animate={{
+          y: 0,
+          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+        }}
         className="text-leMon font-oxanium text-xl mb-4 md:text-3xl"
       >
         Hi, my name is
@@ -68,8 +75,14 @@ const Hero = () => {
       </motion.div>
       <motion.p
         transition={{ delay: 5.1, duration: 1 }}
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{
+          x: -200,
+          clipPath: "polygon(0 0, 0% 0, 0% 0%, 0% 0%)",
+        }}
+        animate={{
+          x: 0,
+          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+        }}
         className="max-w-max font-oxanium text-gray-200 mt-6 md:max-w-xl text-lg md:text-xl"
       >
         I’m a software engineer specialized in building fast, responsive &
@@ -77,8 +90,14 @@ const Hero = () => {
       </motion.p>
       <motion.div
         transition={{ delay: 5.2, duration: 1 }}
-        initial={{ opacity: 0, y: 60 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{
+          y: 200,
+          clipPath: "polygon(0 0, 0% 0, 0% 0%, 0% 0%)",
+        }}
+        animate={{
+          y: 0,
+          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+        }}
         className="leading-[7rem] relative group-disabled: md:group"
       >
         <div

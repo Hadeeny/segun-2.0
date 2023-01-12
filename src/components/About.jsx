@@ -13,6 +13,9 @@ import { motion } from "framer-motion";
 const About = () => {
   const aboutText = "About Me";
 
+  const skill1 = [html, css, javascript, sass, tailwindcss, reactjs]
+  const skill2 = [vite, nextjs, github, redux, framer]
+
   const banner = {
     animate: {
       transition: {
@@ -23,13 +26,14 @@ const About = () => {
   };
 
   const letterAni = {
-    initial: { opacity: 0, x: 600 },
+    initial: { x: 20, clipPath: "polygon(0 0, 0% 0, 0% 0%, 0% 0%)", },
     animate: {
-      opacity: 1,
+      // opacity: 1,
       x: 0,
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
       transition: {
         // ease: [0.6, 0.01, -0.05, 0.95, 0.3],
-        duration: 1,
+        duration: 0.5,
       },
     },
   };
@@ -65,45 +69,33 @@ const About = () => {
         </p>
         <br />
         <br />
-        <div className="flex flex-wrap space-x-4">
-          <div className="w-[2rem] h-[2rem]">
-            <img className="w-full h-full" src={html} />
-          </div>
-          <div className="w-[2rem] h-[2rem]">
-            <img className="w-full h-full" src={css} />
-          </div>
-          <div className="w-[2rem] h-[2rem]">
-            <img className="w-full h-full" src={javascript} />
-          </div>
-          <div className="w-[2rem] h-[2rem]">
-            <img className="w-full h-full" src={sass} />
-          </div>
-          <div className="w-[2rem] h-[2rem]">
-            <img className="w-full h-full" src={tailwindcss} />
-          </div>
-          <div className="w-[2rem] h-[2rem]">
-            <img className="w-full h-full" src={reactjs} />
-          </div>
-        </div>
+        <motion.div
+        variants={banner}
+        initial='initial'
+        whileInView='animate'
+        className="flex flex-wrap space-x-4">
+        {skill1.map((item, i)=>(
+            <motion.div
+            variants={letterAni}
+            key={i} className="w-[2rem] h-[2rem]">
+            <img className="w-full h-full" src={item} />
+          </motion.div>
+          ))}
+        </motion.div>
         <br />
-        <div className="flex flex-wrap space-x-4">
-          <div className="w-[2rem] h-[2rem]">
-            <img className="w-full h-full" src={github} />
-          </div>
-
-          <div className="w-[2rem] h-[2rem]">
-            <img className="w-full h-full" src={framer} />
-          </div>
-          <div className="w-[2rem] h-[2rem]">
-            <img className="w-full h-full" src={redux} />
-          </div>
-          <div className="w-[2rem] h-[2rem]">
-            <img className="w-full h-full" src={nextjs} />
-          </div>
-          <div className="w-[2rem] h-[2rem]">
-            <img className="w-full h-full" src={vite} />
-          </div>
-        </div>
+        <motion.div
+        variants={banner}
+        initial='initial'
+        whileInView='animate'
+        className="flex flex-wrap space-x-4">
+        {skill2.map((item, i)=>(
+            <motion.div
+            variants={letterAni}
+            key={i} className="w-[2rem] h-[2rem]">
+            <img className="w-full h-full" src={item} />
+          </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
