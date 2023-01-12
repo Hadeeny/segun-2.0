@@ -37,7 +37,7 @@ const Menu = () => {
   return (
     <>
       <motion.div
-        transition={{ delay: 9.6, type: "spring", duration: 1 }}
+        transition={{ delay: 5.9, type: "spring", duration: 1 }}
         initial={{ opacity: 0, y: -200 }}
         animate={{ y: 0, opacity: 1 }}
         className={`w-10/12 fixed top-10    

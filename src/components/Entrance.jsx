@@ -22,6 +22,7 @@ const Entrance = () => {
         duration: 1,
       },
     },
+    exit: {opacity:0, x:-300}
   };
   useEffect(() => {
     setTimeout(() => {
@@ -29,36 +30,45 @@ const Entrance = () => {
     }, 10000);
     setTimeout(() => {
       setShowLoading(false);
-    }, 5000);
+    }, 4000);
   }, []);
   const [showEntranceAnimation, setShowEntranceAnimation] = useState(true);
   const [showLoading, setShowLoading] = useState(true);
   return (
     <motion.section>
       <motion.div
-        initial={{ x: 0 }}
-        animate={{ x: "100%" }}
-        transition={{ duration: 1, delay: 1, ease: "easeIn" }}
+        initial={{ x: 0,}}
+        animate={{ x: "100%", }}
+        transition={{ duration: 1.5, ease: [0.74, .06, .4, .92]  }}
         className={`w-screen h-screen ${
           !showEntranceAnimation && "hidden"
-        } fixed z-[400] top-0 left-0 bg-gray-800`}
+        } fixed z-[400] top-0 left-0 bg-white`}
       />
       <motion.div
         initial={{ x: 0 }}
         animate={{ x: "100%" }}
-        transition={{ duration: 1.5, delay: 1.3, ease: "easeIn" }}
+        transition={{ duration: 1.5, delay: 1.7, ease: [0.74, .06, .4, .92] }}
         className={`w-screen ${
           !showEntranceAnimation && "hidden"
-        } h-screen fixed z-[300] top-0 left-0 right-0 bg-leMon`}
+        } h-screen fixed z-[300] top-0 left-0 right-0 bg-black`}
       />
       <motion.div
         initial={{ x: 0 }}
         animate={{ x: "100%" }}
-        transition={{ duration: 1, delay: 3, ease: "easeIn" }}
+        transition={{ duration: 1, delay: 3, ease: [0.74, .06, .4, .92] }}
         className={`w-screen ${
           !showEntranceAnimation && "hidden"
-        } h-screen fixed z-[200] top-0 right-0 left-0 bg-gray-800`}
+        } h-screen fixed z-[200] top-0 right-0 left-0 bg-gray-500`}
       />
+      <motion.div
+        initial={{ x: 0 }}
+        animate={{ x: "100%" }}
+        transition={{ duration: 1.4, delay: 3.8, ease: [0.74, .06, .4, .92] }}
+        className={`w-screen ${
+          !showEntranceAnimation && "hidden"
+        } h-screen fixed z-[100] top-0 right-0 left-0 bg-orange-300`}
+      />
+      <AnimatePresence>
       <motion.div
         variants={banner}
         initial="initial"
@@ -69,6 +79,7 @@ const Entrance = () => {
         {title.split("").map((letters, i) => (
           <motion.span
             variants={letterAni}
+            // exit={{x:-300, opacity:0}}
             key={i}
             className="text-secondary tracking-[0.5rem] text-center 
         min-w-max "
@@ -77,6 +88,7 @@ const Entrance = () => {
           </motion.span>
         ))}
       </motion.div>
+      </AnimatePresence>
       {/* <Screens /> */}
     </motion.section>
   );

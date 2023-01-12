@@ -5,7 +5,7 @@ const Hero = () => {
   const banner = {
     animate: {
       transition: {
-        delayChildren: 7,
+        delayChildren: 4.4,
         staggerChildren: 0.1,
       },
     },
@@ -43,7 +43,7 @@ const Hero = () => {
     justify-center items-start gap-y-2 md:gap-y-6 mx-auto"
     >
       <motion.h2
-        transition={{ delay: 6, duration: 1 }}
+        transition={{ delay: 5, duration: 1 }}
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         className="text-leMon font-oxanium text-xl mb-4 md:text-3xl"
@@ -67,7 +67,7 @@ const Hero = () => {
         ))}
       </motion.div>
       <motion.p
-        transition={{ delay: 7, duration: 0.8 }}
+        transition={{ delay: 5.1, duration: 1 }}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         className="max-w-max font-oxanium text-gray-200 mt-6 md:max-w-xl text-lg md:text-xl"
@@ -76,7 +76,7 @@ const Hero = () => {
         exceptional digital experiences
       </motion.p>
       <motion.div
-        transition={{ delay: 8, duration: 0.8 }}
+        transition={{ delay: 5.2, duration: 1 }}
         initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
         className="leading-[7rem] relative group-disabled: md:group"
