@@ -105,25 +105,15 @@ const Projects = () => {
                   i % 2 === 0 ? "md:text-right" : "md:text-left"
                 } rounded-md`}
               >
-                dflkj alkjfa ;lsdfj a;lkfd alkjdsafl;k aslk askjdf dkj da;lkj
-                asdflj asdflkjsadfakj dflkj alkjfa
+                {project.info}
               </div>
               <ul className="flex justify-start md:justify-end text-sm space-x-2">
-                <li className="p-0 md:px-2 md:py-1 text-leMon text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary ">
-                  React
+                {project.skill.map((skill, i)=>(
+                  <li key={i} className="p-0 md:px-2 md:py-1 text-leMon text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary ">
+                  {skill}
                 </li>
-                <li className="p-0 md:px-2 md:py-1 text-leMon text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary">
-                  Nodejs
-                </li>
-                <li className="p-0 md:px-2 md:py-1 text-leMon text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary">
-                  Express
-                </li>
-                <li className="p-0 md:px-2 md:py-1 text-leMon text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary">
-                  Redux
-                </li>
-                <li className="p-0 md:px-2 md:py-1 text-leMon text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary">
-                  MongoDB
-                </li>
+                ))}
+          
               </ul>
               <div className="flex space-x-2">
                 <a target='_blank' aria-label="open page" href={`${project.link}`}>

@@ -26,10 +26,10 @@ const About = () => {
   };
 
   const letterAni = {
-    initial: { x: 20, clipPath: "polygon(0 0, 0% 0, 0% 0%, 0% 0%)", },
+    initial: { y: 20, clipPath: "polygon(0 0, 0% 0, 0% 0%, 0% 0%)", },
     animate: {
       // opacity: 1,
-      x: 0,
+      y: 0,
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
       transition: {
         // ease: [0.6, 0.01, -0.05, 0.95, 0.3],
@@ -62,9 +62,8 @@ const About = () => {
       <div className="py-8">
         <p className="text-xl md:max-w-2xl">
           I'm a front-end developer from West Africa with a degree in civil
-          engineering. What I have for software development is more of an
-          addiction than a passion, passion is what I have for music, as I also
-          double as a guitarist. I've worked with a couple of technologies over
+          engineering. I love building stuffs for the web, it's almost like an addiction. I play music when I don't code, as 
+          I also double as a guitarist. I've worked with a couple of technologies over
           the years some of which include but aren't limited to:
         </p>
         <br />

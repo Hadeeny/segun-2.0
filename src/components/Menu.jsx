@@ -115,7 +115,7 @@ const Menu = () => {
               <li>
                 <a href='https://linkedin.com/in/segundeniyi' target='_blank'><GrLinkedinOption size={30} color={"#000000"} /></a>
               </li>
-              <li>
+              <li onClick={()=>setShowMenu(false)}>
                 <a href='#contact'><SiGmail size={30} color={"#000000"} /></a>
               </li>
               <li>
