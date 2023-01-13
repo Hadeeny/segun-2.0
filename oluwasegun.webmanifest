@@ -2,6 +2,6 @@
     "short_name": "Oluwasegun", 
     "description": "A self-taught Front End Developer specialized in building fast, responsive & exceptional digital experiences", 
     "icons": [ { "src": "./src/image/segunsmall.png", "sizes": "32x32", "type": "image/png" }, 
-         { "src": "https://ibb.co/rMpw9FP", "sizes": "512x512", "type": "image/png" } ], 
+         { "src": "https://ibb.co/rMpw9FP", "sizes": "512x512", "type": "image/webp" } ], 
          "start_url": "https://segun-adeniyi.vercel.app/", 
          "display": "fullscreen", "theme_color": "#bae67e", "background_color": "#202838"}
