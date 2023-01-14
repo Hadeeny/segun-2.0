@@ -34,7 +34,7 @@ export default defineConfig({
           },
         ],
         // start_url: "https://segun-adeniyi.vercel.app/",
-        display: "fullscreen",
+        display: "standalone",
         theme_color: "#bae67e",
         background_color: "#202838",
       },
