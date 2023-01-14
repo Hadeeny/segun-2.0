@@ -15,7 +15,7 @@ export default defineConfig({
       devOptions: {
         enabled: true,
       },
-      includeAssets: ["favicon.ico", "apple-touch-icon.png", "masked-icon.svg"],
+      includeAssets: ["https://i.postimg.cc/HsznSBhb/segunsmall.png"],
       manifest: {
         name: "Oluwasegun's Portfolio",
         short_name: "Oluwasegun",
@@ -33,7 +33,7 @@ export default defineConfig({
             type: "image/webp",
           },
         ],
-        start_url: "https://segun-adeniyi.vercel.app/",
+        // start_url: "https://segun-adeniyi.vercel.app/",
         display: "fullscreen",
         theme_color: "#bae67e",
         background_color: "#202838",
