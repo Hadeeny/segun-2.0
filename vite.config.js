@@ -23,14 +23,14 @@ export default defineConfig({
           "A self-taught Front End Developer specialized in building fast, responsive & exceptional digital experiences",
         icons: [
           {
-            src: "https://i.postimg.cc/HsznSBhb/segunsmall.png",
-            sizes: "32x32",
-            type: "image/webp",
+            src: "android-chrome-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
           },
           {
-            src: "https://i.postimg.cc/Pqk7PQdF/segunbig.png",
+            src: "android-chrome-512x512.png",
             sizes: "512x512",
-            type: "image/webp",
+            type: "image/png",
           },
         ],
         // start_url: "https://segun-adeniyi.vercel.app/",
