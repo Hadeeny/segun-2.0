@@ -15,7 +15,7 @@ export default defineConfig({
       devOptions: {
         enabled: true,
       },
-      includeAssets: ["https://i.postimg.cc/HsznSBhb/segunsmall.png"],
+      includeAssets: ["favicon.ico", "apple-touch-icon.png", "masked-icon.svg"],
       manifest: {
         name: "Oluwasegun's Portfolio",
         short_name: "Oluwasegun",
