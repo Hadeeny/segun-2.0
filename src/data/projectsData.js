@@ -44,7 +44,7 @@ export const myProjects = [
   },
   {
     title: "Webisoft clone",
-    link: "https://crappo-woad.vercel.app/",
+    link: "https://webisoft-clone.vercel.app/",
     info: `
         Webisoft is a consulting firm in marketing, design sales and
          software engineering. It automates its client's bussiness, connects their systems and assembles
