@@ -13,8 +13,22 @@ import { motion } from "framer-motion";
 const About = () => {
   const aboutText = "About Me";
 
-  const skill1 = [html, css, javascript, sass, tailwindcss, reactjs]
-  const skill2 = [vite, nextjs, github, redux, framer]
+  const skill1 = [
+    { icon: html, name: "html" },
+    { icon: css, name: "css" },
+    { icon: javascript, name: "javascript" },
+    { icon: sass, name: "sass" },
+    { icon: tailwindcss, name: "tailwindcss" },
+    { icon: reactjs, name: "reactjs" },
+  ];
+  const skill2 = [
+    { icon: vite, name: "vite" },
+    { icon: nextjs, name: "nextjs" },
+    { icon: github, name: "github" },
+    { icon: redux, name: "redux" },
+    { icon: framer, name: "framer motion" },
+  ];
+  // const skill2 = [vite, nextjs, github, redux, framer];
 
   const banner = {
     animate: {
@@ -26,12 +40,25 @@ const About = () => {
   };
 
   const letterAni = {
-    initial: { y: 20, clipPath: "polygon(0 0, 0% 0, 0% 0%, 0% 0%)", },
+    initial: { y: 10, clipPath: "polygon(0 0, 0% 0, 0% 0%, 0% 0%)" },
     animate: {
       // opacity: 1,
       y: 0,
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
       transition: {
+        // ease: [0.6, 0.01, -0.05, 0.95, 0.3],
+        duration: 0.5,
+      },
+    },
+  };
+  const ani = {
+    initial: { y: 0, clipPath: "polygon(0 0, 0% 0, 0% 0%, 0% 0%)" },
+    animate: {
+      // opacity: 1,
+      y: 0,
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+      transition: {
+        delay: 0.8,
         // ease: [0.6, 0.01, -0.05, 0.95, 0.3],
         duration: 0.5,
       },
@@ -62,37 +89,46 @@ const About = () => {
       <div className="py-8">
         <p className="text-xl md:max-w-2xl">
           I'm a front-end developer from West Africa with a degree in civil
-          engineering. I love building stuffs for the web, it's almost like an addiction. I play music when I don't code, as 
-          I also double as a guitarist. I've worked with a couple of technologies over
-          the years some of which include but aren't limited to:
+          engineering. I love building stuffs for the web, it's almost like an
+          addiction. I play music when I don't code, as I also double as a
+          guitarist. I've worked with a couple of technologies over the years
+          some of which include but aren't limited to:
         </p>
         <br />
         <br />
         <motion.div
-        variants={banner}
-        initial='initial'
-        whileInView='animate'
-        className="flex flex-wrap space-x-4">
-        {skill1.map((item, i)=>(
+          variants={banner}
+          initial="initial"
+          whileInView="animate"
+          className="flex flex-wrap space-x-4"
+        >
+          {skill1.map((item, i) => (
             <motion.div
-            variants={letterAni}
-            key={i} className="w-[2rem] h-[2rem]">
-            <img className="w-full h-full" src={item} />
-          </motion.div>
+              variants={letterAni}
+              key={i}
+              className="px-4 py-1 space-x-2 flex items-center text-gray-200 rounded-full bg-leMon/50"
+            >
+              <img className="w-4 h-4" src={item.icon} />
+              <p>{item.name}</p>
+            </motion.div>
           ))}
         </motion.div>
         <br />
         <motion.div
-        variants={banner}
-        initial='initial'
-        whileInView='animate'
-        className="flex flex-wrap space-x-4">
-        {skill2.map((item, i)=>(
+          variants={banner}
+          initial="initial"
+          whileInView="animate"
+          className="flex flex-wrap space-x-4"
+        >
+          {skill2.map((item, i) => (
             <motion.div
-            variants={letterAni}
-            key={i} className="w-[2rem] h-[2rem]">
-            <img className="w-full h-full" src={item} />
-          </motion.div>
+              variants={ani}
+              key={i}
+              className="px-4 py-1 space-x-2 flex items-center text-gray-200 rounded-full bg-leMon/50"
+            >
+              <img className="w-4 h-4" src={item.icon} />
+              <p>{item.name}</p>
+            </motion.div>
           ))}
         </motion.div>
       </div>
