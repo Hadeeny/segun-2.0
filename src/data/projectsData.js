@@ -3,6 +3,7 @@ import crappo from "../image/crappo.jpg";
 import proshop from "../image/proshop1.jpg";
 import musica from "../image/Home.jpg";
 import webisoft from "../image/webisoft.jpg";
+import home from "../image/home rental.jpg";
 export const myProjects = [
   {
     title: "Music web app",
@@ -51,5 +52,15 @@ export const myProjects = [
          tools for its clients`,
     image: webisoft,
     skill: ["reactjs", "tailwindcss"],
+  },
+  {
+    title: "Home rental",
+    link: "https://webisoft-clone.vercel.app/",
+    info: `
+        Webisoft is a consulting firm in marketing, design sales and
+         software engineering. It automates its client's bussiness, connects their systems and assembles
+         tools for its clients`,
+    image: home,
+    skill: ["html", "tailwindcss", "javascript"],
   },
 ];
