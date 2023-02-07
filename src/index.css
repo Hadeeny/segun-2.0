@@ -16,6 +16,10 @@ body {
   /* color: rgb(39, 38, 38); */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #mask {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
