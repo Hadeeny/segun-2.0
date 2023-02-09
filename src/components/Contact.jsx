@@ -59,7 +59,7 @@ const title = 'Contact'
         items-start gap-y-2 md:gap-y-6 mx-auto"
     >
       <div className="mt-[4rem] flex items-center w-full">
-        <div className="text-[1.5rem] text-primary">02.</div>
+        <div className="text-[1.5rem] text-primary">03.</div>
         <motion.div 
         variants={banner}
         initial='initial'
