@@ -52,7 +52,7 @@ const About = () => {
     },
   };
   const ani = {
-    initial: { y: 0, clipPath: "polygon(0 0, 0% 0, 0% 0%, 0% 0%)" },
+    initial: { y: 10, clipPath: "polygon(0 0, 0% 0, 0% 0%, 0% 0%)" },
     animate: {
       // opacity: 1,
       y: 0,
