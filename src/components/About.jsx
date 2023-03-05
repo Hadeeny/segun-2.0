@@ -47,7 +47,7 @@ const About = () => {
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
       transition: {
         // ease: [0.6, 0.01, -0.05, 0.95, 0.3],
-        duration: 0.5,
+        duration: 0.2,
       },
     },
   };
@@ -58,9 +58,9 @@ const About = () => {
       y: 0,
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
       transition: {
-        delay: 0.8,
+        delay: 0.7,
         // ease: [0.6, 0.01, -0.05, 0.95, 0.3],
-        duration: 0.5,
+        duration: 0.2,
       },
     },
   };
