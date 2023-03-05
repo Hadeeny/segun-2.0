@@ -5,7 +5,18 @@ import musica from "../image/Home.jpg";
 import webisoft from "../image/webisoft.jpg";
 import home from "../image/home rental.jpg";
 import movie from "../image/moviemania.jpg";
+import resumeA from "../image/resumeA.jpg";
 export const myProjects = [
+  {
+    title: "Resume builder/generator",
+    link: "https://resume-builder-dusky.vercel.app/",
+    info: `
+        ResumeA is a CV/Resume builder with a handful of templates to build and 
+        customize CVs, it is mobile and desktop friendly as opposed to other platforms 
+        that are usually desktop-centric`,
+    image: resumeA,
+    skill: ["nextjs", "tailwindcss", "redux-toolkit", "typescript"],
+  },
   {
     title: "Music web app",
     link: "https://musica-sandy.vercel.app/",
