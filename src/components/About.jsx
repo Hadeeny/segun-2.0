@@ -106,7 +106,7 @@ const About = () => {
             <motion.div
               variants={letterAni}
               key={i}
-              className="px-4 py-1 space-x-2 flex items-center text-gray-200 rounded-lg md:rounded-full bg-leMon/50"
+              className="px-2 md:px-4 py-1 space-x-2 flex items-center text-gray-200 rounded-lg md:rounded-full bg-leMon/50"
             >
               <img className="w-4 h-4" src={item.icon} />
               <p className="hidden md:block">{item.name}</p>
@@ -124,7 +124,7 @@ const About = () => {
             <motion.div
               variants={ani}
               key={i}
-              className="px-4 py-1 space-x-2 flex items-center text-gray-200 rounded-lg md:rounded-full bg-leMon/50"
+              className="px-2 md:px-4 py-1 space-x-2 flex items-center text-gray-200 rounded-lg md:rounded-full bg-leMon/50"
             >
               <img className="w-4 h-4" src={item.icon} />
               <p className="hidden md:block">{item.name}</p>
