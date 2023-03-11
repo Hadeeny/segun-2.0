@@ -9,7 +9,11 @@ import reactjs from "../image/reactjs.svg";
 import vite from "../image/vite.svg";
 import github from "../image/github.svg";
 import nextjs from "../image/nextjs.svg";
+import material from "../image/material.svg";
+import typescript from "../image/typescript.svg";
+import bootstrap from "../image/bootstrap.svg";
 import { motion } from "framer-motion";
+import white from '../image/white.jpg'
 const About = () => {
   const aboutText = "About Me";
 
@@ -17,16 +21,20 @@ const About = () => {
     { icon: html, name: "html" },
     { icon: css, name: "css" },
     { icon: javascript, name: "javascript" },
+    { icon: typescript, name: "typescript" },
     { icon: sass, name: "sass" },
     { icon: tailwindcss, name: "tailwindcss" },
+    { icon: bootstrap, name: "bootstrap" },
+    { icon: material, name: "MUI" },
     { icon: reactjs, name: "reactjs" },
-  ];
-  const skill2 = [
     { icon: vite, name: "vite" },
     { icon: nextjs, name: "nextjs" },
     { icon: github, name: "github" },
     { icon: redux, name: "redux" },
     { icon: framer, name: "framer motion" },
+  ];
+  const skill2 = [
+
   ];
   // const skill2 = [vite, nextjs, github, redux, framer];
 
@@ -100,37 +108,21 @@ const About = () => {
           variants={banner}
           initial="initial"
           whileInView="animate"
-          className="flex flex-wrap space-x-4"
+          className="flex flex-wrap w-full md:w-2/3 space-x-4"
         >
           {skill1.map((item, i) => (
             <motion.div
               variants={letterAni}
               key={i}
-              className="px-2 md:px-4 py-1 space-x-2 flex items-center text-gray-200 rounded-lg md:rounded-full bg-leMon/50"
+              className="py-3  space-x-2 flex items-center text-gray-200"
             >
               <img className="w-4 h-4" src={item.icon} />
-              <p className="hidden md:block">{item.name}</p>
+              <p className="block">{item.name}</p>
             </motion.div>
           ))}
         </motion.div>
-        <br />
-        <motion.div
-          variants={banner}
-          initial="initial"
-          whileInView="animate"
-          className="flex flex-wrap space-x-4"
-        >
-          {skill2.map((item, i) => (
-            <motion.div
-              variants={ani}
-              key={i}
-              className="px-2 md:px-4 py-1 space-x-2 flex items-center text-gray-200 rounded-lg md:rounded-full bg-leMon/50"
-            >
-              <img className="w-4 h-4" src={item.icon} />
-              <p className="hidden md:block">{item.name}</p>
-            </motion.div>
-          ))}
-        </motion.div>
+        
+        
       </div>
     </section>
   );
