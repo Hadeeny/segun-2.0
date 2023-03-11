@@ -38,8 +38,10 @@ html {
   vertical-align: middle;
 }
 
-/* .inner {
-  margin-left: auto;
-  margin-right: auto;
-   width: 400px;
-} */
+.reveal-text {
+  color: transparent;
+  background-image: url("./image/white.jpg");
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-repeat: repeat-x;
+}
