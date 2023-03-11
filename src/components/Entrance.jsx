@@ -57,7 +57,7 @@ const Entrance = () => {
             <motion.div
               className={`text-center ${
                 !isGreeting && "hidden"
-              } text-[3rem] font-bold innter`}
+              } text-[1.2rem] md:text-[3rem] font-bold innter`}
             >
               KONNICHIWA!
             </motion.div>
@@ -94,7 +94,7 @@ const Entrance = () => {
       >
         <div className="outer">
           <div className="middle">
-            <div className="text-center text-white text-[3rem] font-bold innter">
+            <div className="text-center text-white text-[1.2rem] md:text-[3rem] font-bold innter">
               CIAO!
             </div>
           </div>
@@ -110,7 +110,7 @@ const Entrance = () => {
       >
         <div className="outer">
           <div className="middle">
-            <div className="text-center text-[3rem] font-bold innter">
+            <div className="text-center text-[1.2rem] md:text-[3rem] font-bold innter">
               BONJOUR!
             </div>
           </div>
@@ -130,8 +130,8 @@ const Entrance = () => {
       >
         <div className="outer">
           <div className="middle">
-            <div className="text-center text-[3rem] font-bold innter">
-              HOLLA
+            <div className="text-center text-[1.2rem] md:text-[3rem] font-bold innter">
+              HOLLA!
             </div>
           </div>
         </div>
