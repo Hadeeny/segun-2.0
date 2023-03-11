@@ -31,55 +31,123 @@ const Entrance = () => {
     setTimeout(() => {
       setShowLoading(false);
     }, 4000);
+    setTimeout(() => {
+      setIsGreeting(false);
+    }, 4550);
   }, []);
   const [showEntranceAnimation, setShowEntranceAnimation] = useState(true);
+  const [isGreeting, setIsGreeting] = useState(true);
   const [showLoading, setShowLoading] = useState(true);
   return (
-    <motion.section>
+    <motion.section className="text-white">
       <motion.div
-        initial={{ x: 0,}}
-        animate={{ x: "100%", }}
-        transition={{ duration: 1.5, ease: [0.74, .06, .4, .92]  }}
+        initial={{ y: 0 }}
+        animate={{ y: "-100%" }}
+        transition={{
+          delay: 4.5,
+          duration: 1.1,
+          // ease: [0.74, 0.06, 0.4, 0.92],
+        }}
         className={`w-screen h-screen ${
           !showEntranceAnimation && "hidden"
-        } fixed z-[400] top-0 left-0 bg-white`}
-      />
+        } fixed z-[200] top-0 bottom-0 left-0 bg-cyan-700`}
+      >
+        <div className="outer">
+          <div className="middle">
+            <motion.div
+              className={`text-center ${
+                !isGreeting && "hidden"
+              } text-[3rem] font-bold innter`}
+            >
+              KONNICHIWA!
+            </motion.div>
+          </div>
+        </div>
+      </motion.div>
+      {/* decoy */}
       <motion.div
-        initial={{ x: 0 }}
-        animate={{ x: "100%" }}
-        transition={{ duration: 1.5, delay: 1.7, ease: [0.74, .06, .4, .92] }}
+        initial={{ y: 0 }}
+        animate={{ y: "-100%" }}
+        transition={{
+          delay: 4.8,
+          duration: 0.9,
+          ease: [0.74, 0.06, 0.4, 0.92],
+        }}
         className={`w-screen ${
           !showEntranceAnimation && "hidden"
-        } h-screen fixed z-[300] top-0 left-0 right-0 bg-black`}
-      />
+        } h-screen fixed z-[100] top-0 bottom-0 left-0 right-0 bg-red-500`}
+      >
+        Second
+      </motion.div>
+      {/* decoy ends */}
       <motion.div
-        initial={{ x: 0 }}
-        animate={{ x: "100%" }}
-        transition={{ duration: 1, delay: 3, ease: [0.74, .06, .4, .92] }}
+        initial={{ display: "block" }}
+        animate={{ display: "none" }}
+        transition={{
+          delay: 3.5,
+          // duration: 0.9,
+          ease: [0.74, 0.06, 0.4, 0.92],
+        }}
         className={`w-screen ${
           !showEntranceAnimation && "hidden"
-        } h-screen fixed z-[200] top-0 right-0 left-0 bg-gray-500`}
-      />
+        } h-screen fixed z-[200] top-0 bottom-0 left-0 right-0 bg-red-500`}
+      >
+        <div className="outer">
+          <div className="middle">
+            <div className="text-center text-white text-[3rem] font-bold innter">
+              CIAO!
+            </div>
+          </div>
+        </div>
+      </motion.div>
       <motion.div
-        initial={{ x: 0 }}
-        animate={{ x: "100%" }}
-        transition={{ duration: 1.4, delay: 3.8, ease: [0.74, .06, .4, .92] }}
+        initial={{ display: "block" }}
+        animate={{ display: "none" }}
+        transition={{ delay: 2.5, ease: [0.74, 0.06, 0.4, 0.92] }}
         className={`w-screen ${
           !showEntranceAnimation && "hidden"
-        } h-screen fixed z-[100] top-0 right-0 left-0 bg-orange-300`}
-      />
+        } h-screen fixed z-[300] top-0 bottom-0 right-0 left-0 bg-slate-500`}
+      >
+        <div className="outer">
+          <div className="middle">
+            <div className="text-center text-[3rem] font-bold innter">
+              BONJOUR!
+            </div>
+          </div>
+        </div>
+      </motion.div>
       <motion.div
+        initial={{ display: "block" }}
+        animate={{ display: "none" }}
+        transition={{
+          // duration: 1.4,
+          delay: 1.5,
+          ease: [0.74, 0.06, 0.4, 0.92],
+        }}
+        className={`w-screen ${
+          !showEntranceAnimation && "hidden"
+        } h-screen fixed z-[400] table top-0 bottom-0 right-0 left-0 bg-orange-400`}
+      >
+        <div className="outer">
+          <div className="middle">
+            <div className="text-center text-[3rem] font-bold innter">
+              HOLLA
+            </div>
+          </div>
+        </div>
+      </motion.div>
+      {/* <motion.div
         variants={banner}
         initial="initial"
         whileInView="animate"
         className={`fixed ${!showLoading && "hidden"} tracking-[0.3rem] 
-            top-0 h-screen w-screen z-[500] bg-transparent flex justify-center items-center left-0 right-0`}
+            top-0 bottom-0 h-screen w-screen z-[500] bg-transparent flex justify-center items-center left-0 right-0`}
       >
         {title.split("").map((letters, i) => (
           <motion.span
             variants={letterAni}
             exit={{ x: 570, transition: { duration: 0.5 } }}
-            // exit={{x:-300, opacity:0}}
+            
             key={i}
             className="text-secondary tracking-[0.5rem] text-center 
         min-w-max "
@@ -87,8 +155,7 @@ const Entrance = () => {
             {letters}
           </motion.span>
         ))}
-      </motion.div>
-      {/* <Screens /> */}
+      </motion.div> */}
     </motion.section>
   );
 };

@@ -15,7 +15,7 @@ function App() {
       <Entrance/>
       <Screens/>
       <Socials/>
-      {/* <Footer/> */}
+      <Footer/>
     </AnimatePresence>
   )
 }
