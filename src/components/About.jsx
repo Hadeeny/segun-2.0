@@ -108,13 +108,13 @@ const About = () => {
           variants={banner}
           initial="initial"
           whileInView="animate"
-          className="flex flex-wrap w-full md:w-2/3 space-x-4"
+          className="flex flex-wrap w-full md:w-2/3"
         >
           {skill1.map((item, i) => (
             <motion.div
               variants={letterAni}
               key={i}
-              className="py-3  space-x-2 flex items-center text-gray-200"
+              className="py-3 ml-6 space-x-2 flex items-center text-gray-200"
             >
               <img className="w-4 h-4" src={item.icon} />
               <p className="block">{item.name}</p>
