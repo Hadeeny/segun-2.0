@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Screens from "./Screens";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, spring } from "framer-motion";
 const Entrance = () => {
   const title = "Loading...";
   const banner = {
@@ -46,7 +46,6 @@ const Entrance = () => {
         transition={{
           delay: 4.5,
           duration: 1.1,
-          // ease: [0.74, 0.06, 0.4, 0.92],
         }}
         className={`w-screen h-screen ${
           !showEntranceAnimation && "hidden"
@@ -55,6 +54,14 @@ const Entrance = () => {
         <div className="outer">
           <div className="middle">
             <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 1.3,
+                delay: 3.3,
+                type: "spring",
+                stiffness: 200,
+              }}
               className={`text-center ${
                 !isGreeting && "hidden"
               } text-[1.2rem] md:text-[3rem] font-bold innter`}
@@ -85,7 +92,6 @@ const Entrance = () => {
         animate={{ display: "none" }}
         transition={{
           delay: 3.5,
-          // duration: 0.9,
           ease: [0.74, 0.06, 0.4, 0.92],
         }}
         className={`w-screen ${
@@ -94,9 +100,19 @@ const Entrance = () => {
       >
         <div className="outer">
           <div className="middle">
-            <div className="text-center text-white text-[1.2rem] md:text-[3rem] font-bold innter">
+            <motion.div
+              initial={{ opacity: 0, x: "-400" }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.3,
+                delay: 1.8,
+                type: "spring",
+                stiffness: 170,
+              }}
+              className="text-center text-white text-[1.2rem] md:text-[3rem] font-bold"
+            >
               CIAO!
-            </div>
+            </motion.div>
           </div>
         </div>
       </motion.div>
@@ -110,9 +126,19 @@ const Entrance = () => {
       >
         <div className="outer">
           <div className="middle">
-            <div className="text-center text-[1.2rem] md:text-[3rem] font-bold innter">
+            <motion.div
+              initial={{ opacity: 0, y: "4rem" }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.3,
+                delay: 1.4,
+                type: "spring",
+                stiffness: 130,
+              }}
+              className="text-center text-[1.2rem] md:text-[3rem] font-bold"
+            >
               BONJOUR!
-            </div>
+            </motion.div>
           </div>
         </div>
       </motion.div>
@@ -120,18 +146,17 @@ const Entrance = () => {
         initial={{ display: "block" }}
         animate={{ display: "none" }}
         transition={{
-          // duration: 1.4,
           delay: 1.5,
           ease: [0.74, 0.06, 0.4, 0.92],
         }}
-        className={`w-screen ${
-          !showEntranceAnimation && "hidden"
-        } h-screen fixed z-[400] table top-0 bottom-0 right-0 left-0 bg-orange-400`}
+        className={`w-screen 
+        ${!showEntranceAnimation && "hidden"}
+         h-screen fixed z-[400] table top-0 bottom-0 right-0 left-0 bg-orange-400`}
       >
         <div className="outer">
           <div className="middle">
-            <div className="text-center text-[1.2rem] md:text-[3rem] font-bold innter">
-              HOLLA!
+            <div className="text-center text-[1.2rem] md:text-[3rem] font-bold reveal-text">
+              HOLLA
             </div>
           </div>
         </div>

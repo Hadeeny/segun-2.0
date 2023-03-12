@@ -41,7 +41,38 @@ html {
 .reveal-text {
   color: transparent;
   background-image: url("./image/white.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   -webkit-background-clip: text;
   background-clip: text;
-  background-repeat: repeat-x;
+  animation: grow 0.5s linear;
+}
+
+@keyframes grow {
+  from {
+    background-position-y: 4rem;
+  }
+  to {
+    background-position-y: 0rem;
+  }
+}
+.reveal-textt {
+  color: transparent;
+  background-image: url("./image/white.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* animation: grow 0.5s linear; */
+}
+
+@keyframes grow {
+  from {
+    background-position-y: 4rem;
+    /* background-image: url("./image/white.jpg"); */
+  }
+  to {
+    /* background-image: url("./image/white.jpg"); */
+    background-position-y: 0rem;
+  }
 }
