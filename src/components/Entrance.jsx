@@ -2,24 +2,23 @@ import { useState, useEffect } from "react";
 import Screens from "./Screens";
 import { motion, AnimatePresence, spring } from "framer-motion";
 const Entrance = () => {
-  const title = "Loading...";
+  const title = "EXCELLENCE!";
   const banner = {
     animate: {
       transition: {
-        delayChildren: 1,
+        delayChildren: 2.3,
         staggerChildren: 0.1,
       },
     },
   };
 
   const letterAni = {
-    initial: { opacity: 0, x: 500 },
+    initial: { scale: 0, x: 500 },
     animate: {
-      opacity: 1,
+      scale: 1,
       x: 0,
       transition: {
-        // ease: [0.6, 0.01, -0.05, 0.95, 0.3],
-        duration: 1,
+        duration: 0.8,
       },
     },
     // exit: {opacity:0, x:-300}
@@ -33,7 +32,7 @@ const Entrance = () => {
     }, 4000);
     setTimeout(() => {
       setIsGreeting(false);
-    }, 4550);
+    }, 4750);
   }, []);
   const [showEntranceAnimation, setShowEntranceAnimation] = useState(true);
   const [isGreeting, setIsGreeting] = useState(true);
@@ -52,21 +51,24 @@ const Entrance = () => {
         } fixed z-[200] top-0 bottom-0 left-0 bg-cyan-700`}
       >
         <div className="outer">
-          <div className="middle">
+          <div className="flex middle">
             <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                duration: 1.3,
-                delay: 3.3,
-                type: "spring",
-                stiffness: 200,
-              }}
-              className={`text-center ${
-                !isGreeting && "hidden"
-              } text-[1.2rem] md:text-[3rem] font-bold innter`}
+              variants={banner}
+              initial="initial"
+              whileInView="animate"
+              className={`fixed ${!isGreeting && "hidden"} 
+            top-0 bottom-0 h-screen w-screen z-[500] bg-transparent flex justify-center items-center left-0 right-0`}
             >
-              KONNICHIWA!
+              {title.split("").map((letters, i) => (
+                <motion.span
+                  variants={letterAni}
+                  exit={{ x: 570, transition: { duration: 0.5 } }}
+                  key={i}
+                  className="text-center text-[1.2rem] md:text-[3rem] font-bold min-w-max "
+                >
+                  {letters}
+                </motion.span>
+              ))}
             </motion.div>
           </div>
         </div>
@@ -111,7 +113,7 @@ const Entrance = () => {
               }}
               className="text-center text-white text-[1.2rem] md:text-[3rem] font-bold"
             >
-              CIAO!
+              PASSION!
             </motion.div>
           </div>
         </div>
@@ -137,7 +139,7 @@ const Entrance = () => {
               }}
               className="text-center text-[1.2rem] md:text-[3rem] font-bold"
             >
-              BONJOUR!
+              HARDWORK!
             </motion.div>
           </div>
         </div>
@@ -156,31 +158,11 @@ const Entrance = () => {
         <div className="outer">
           <div className="middle">
             <div className="text-center text-[1.2rem] md:text-[3rem] font-bold reveal-text">
-              HOLLA
+              CREATIVITY!
             </div>
           </div>
         </div>
       </motion.div>
-      {/* <motion.div
-        variants={banner}
-        initial="initial"
-        whileInView="animate"
-        className={`fixed ${!showLoading && "hidden"} tracking-[0.3rem] 
-            top-0 bottom-0 h-screen w-screen z-[500] bg-transparent flex justify-center items-center left-0 right-0`}
-      >
-        {title.split("").map((letters, i) => (
-          <motion.span
-            variants={letterAni}
-            exit={{ x: 570, transition: { duration: 0.5 } }}
-            
-            key={i}
-            className="text-secondary tracking-[0.5rem] text-center 
-        min-w-max "
-          >
-            {letters}
-          </motion.span>
-        ))}
-      </motion.div> */}
     </motion.section>
   );
 };
