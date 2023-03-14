@@ -6,6 +6,7 @@ import webisoft from "../image/webisoft.jpg";
 import home from "../image/home rental.jpg";
 import movie from "../image/moviemania.jpg";
 import resumeA from "../image/resumeA.jpg";
+import me from "../image/me.jpg";
 export const myProjects = [
   {
     title: "Resume builder/generator",

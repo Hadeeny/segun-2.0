@@ -76,3 +76,24 @@ html {
     background-position-y: 0rem;
   }
 }
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #ffae57;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.overlay::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  background-color: #0a192f;
+  mix-blend-mode: screen;
+}

@@ -71,16 +71,16 @@ const Projects = () => {
               transition={{ duration: 1 }}
               className="w-full group md:w-1/2 relative"
             >
-              <div className=" w-full h-[18rem] md:h-[22rem]">
+              <div className="overlay">
                 <img
                   src={project.image}
-                  className="w-full h-full object-cover"
+                  className="w-full mix-blend-multiply grayscale contrast-100 brightness-50 h-full object-cover"
                 />
               </div>
-              <div
-                className="absolute top-0 group-hover:w-0 duration-500 h-full 
-                md:opacity-50 opacity-50 bg-black  md:bg-yellow-900 w-full"
-              ></div>
+              {/* <div
+                className="absolute bg-yellow-500 top-0 group-hover:w-0 duration-500 h-full 
+                  w-full"
+              ></div> */}
               <div className="h-full w-[3px] absolute top-0 right-0 group-hover:left-0 bg-primary" />
             </motion.div>
             <motion.div
