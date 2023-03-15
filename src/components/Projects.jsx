@@ -74,7 +74,7 @@ const Projects = () => {
               <div className=" w-full h-[18rem] md:h-[22rem]">
                 <img
                   src={project.image}
-                  className="w-full h-full object-cover"
+                  className=" h-full object-cover"
                 />
               </div>
               <div
@@ -101,7 +101,7 @@ const Projects = () => {
                 </div>
               </div>
               <div
-                className={`w-full md:block hidden p-0 md:p-6 bg-transparent text-gray-200 md:border-2 md:bg-[#2F3B54]/20 md:backdrop-blur-xl md:border-primary ${
+                className={`w-full md:block hidden p-0 md:p-6 text-gray-200 bg-[#2F3B54] md:backdrop-blur-xl ${
                   i % 2 === 0 ? "md:text-right" : "md:text-left"
                 } rounded-md`}
               >
