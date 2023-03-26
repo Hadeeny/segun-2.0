@@ -113,7 +113,7 @@ const Contact = () => {
           />
         </div>
         <input
-          className="bg-leMon w-full md:w-1/3 h-[3rem] rounded cursor-pointer text-[#202838]"
+          className="border border-leMon shadow-3xl w-full md:w-1/3 h-[3rem] rounded cursor-pointer hover:text-white text-leMon"
           type="submit"
         />
       </form>

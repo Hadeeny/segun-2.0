@@ -80,7 +80,7 @@ const Hero = () => {
         I’m a software engineer specialized in building fast, responsive &
         exceptional digital experiences
       </motion.p>
-      <motion.div
+      {/* <motion.div
         transition={{ delay: 5.2, duration: 1 }}
         initial={{
           y: 200,
@@ -90,16 +90,15 @@ const Hero = () => {
           y: 0,
           clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
         }}
-        className="leading-[7rem] w-[18rem] shadow-3xl flex justify-center h-[4rem] items-center border border-leMon relative group-disabled: md:group"
+      > */}
+      <a
+        href="#projects"
+        className="leading-[7rem] z-10  
+        text-xl tracking-[0.4rem] duration-300 text-leMon hover:tracking-[0.6rem] hover:text-white w-[18rem] shadow-3xl flex justify-center h-[4rem] items-center border border-leMon relative group-disabled: md:group"
       >
-        <a
-          href="#projects"
-          className=" z-10 duration-300 
-          hover:text-white text-xl tracking-[0.4rem]"
-        >
-          Projects
-        </a>
-      </motion.div>
+        Projects
+      </a>
+      {/* </motion.div> */}
       {/* <a href="#contact">Contact</a> */}
     </motion.section>
   );
