@@ -17,19 +17,6 @@ const Socials = () => {
     },
   };
 
-  // const letterAni = {
-  //   initial: { opacity: 0 },
-  //   animate: {
-  //     opacity: 1,
-  //     scale: [1, 1.4, 1, 1.4, 1],
-  //     transition: {
-  //       ease: "easeIn",
-  //       // ease: [0.6, 0.01, -0.05, 0.95, 0.3],
-  //       duration: 0.7,
-  //     },
-  //   },
-  // };
-
   const letterAni = {
     initial: { opacity: 0, x: 500 },
     animate: {
@@ -54,7 +41,7 @@ const Socials = () => {
           transition={{ delay: 6.4, duration: 0.5 }}
         >
           <a href="https://github.com/hadeeny" target="_blank">
-            <FaGithub size={25} color={"#bae67e"} />
+            <FaGithub size={25} color={"#42946e"} />
           </a>
         </motion.li>
         <motion.li
@@ -63,7 +50,7 @@ const Socials = () => {
           transition={{ delay: 6, duration: 0.5 }}
         >
           <a target="_blank" href="https://twitter.com/segun_deniyi">
-            <ImTwitter size={25} color={"#bae67e"} />
+            <ImTwitter size={25} color={"#42946e"} />
           </a>
         </motion.li>
         <motion.li
@@ -72,7 +59,7 @@ const Socials = () => {
           transition={{ delay: 5.8, duration: 0.5 }}
         >
           <a href="#contact">
-            <SiGmail size={25} color={"#bae67e"} />
+            <SiGmail size={25} color={"#42946e"} />
           </a>
         </motion.li>
         <motion.li
@@ -81,7 +68,7 @@ const Socials = () => {
           transition={{ delay: 5.6, duration: 0.5 }}
         >
           <a href="https://linkedin.com/in/segundeniyi" target="_blank">
-            <GrLinkedinOption size={25} color={"#bae67e"} />
+            <GrLinkedinOption size={25} color={"#42946e"} />
           </a>
         </motion.li>
       </motion.ul>

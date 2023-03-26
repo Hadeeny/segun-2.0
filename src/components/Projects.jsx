@@ -41,7 +41,7 @@ const Projects = () => {
         items-start gap-y-2 md:gap-y-6 mx-auto"
     >
       <div className="mt-[4rem] flex items-center w-full">
-        <div className="text-[1.5rem] text-primary">02.</div>
+        <div className="text-[1.5rem] text-rouge">02.</div>
         <motion.div
           variants={banner}
           initial="initial"
@@ -54,7 +54,7 @@ const Projects = () => {
             </motion.span>
           ))}
         </motion.div>
-        <div className="h-[0.2rem] bg-[#bae67e] w-full"></div>
+        <div className="h-[0.2rem] bg-leMon w-full"></div>
       </div>
       {/* project */}
       {myProjects.map((project, i) => {
@@ -72,10 +72,7 @@ const Projects = () => {
               className="w-full group md:w-1/2 relative"
             >
               <div className=" w-full h-[18rem] md:h-[22rem]">
-                <img
-                  src={project.image}
-                  className=" h-full object-cover"
-                />
+                <img src={project.image} className=" h-full object-cover" />
               </div>
               <div
                 className="absolute top-0 group-hover:w-0 duration-500 h-full 
@@ -108,18 +105,28 @@ const Projects = () => {
                 {project.info}
               </div>
               <ul className="flex justify-start md:justify-end text-sm space-x-2">
-                {project.skill.map((skill, i)=>(
-                  <li key={i} className="p-0 md:px-2 md:py-1 text-leMon text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary ">
-                  {skill}
-                </li>
+                {project.skill.map((skill, i) => (
+                  <li
+                    key={i}
+                    className="p-0 md:px-2 md:py-1 text-leMon text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary "
+                  >
+                    {skill}
+                  </li>
                 ))}
-          
               </ul>
               <div className="flex space-x-2">
-                <a target='_blank' aria-label="open page" href={`${project.link}`}>
+                <a
+                  target="_blank"
+                  aria-label="open page"
+                  href={`${project.link}`}
+                >
                   <RiGithubLine size={30} color={"#ef6b73"} />
                 </a>
-                <a target='_blank' aria-label="view code" href={`${project.link}`}>
+                <a
+                  target="_blank"
+                  aria-label="view code"
+                  href={`${project.link}`}
+                >
                   <MdOutlineOpenInNew size={30} color={"#bae67e"} />
                 </a>
               </div>

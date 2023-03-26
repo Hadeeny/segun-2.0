@@ -48,7 +48,7 @@ const Entrance = () => {
         }}
         className={`w-screen h-screen ${
           !showEntranceAnimation && "hidden"
-        } fixed z-[200] top-0 bottom-0 left-0 bg-cyan-700`}
+        } fixed z-[200] top-0 bottom-0 left-0 bg-[#13111d]`}
       >
         <div className="outer">
           <div className="flex middle">
@@ -84,7 +84,7 @@ const Entrance = () => {
         }}
         className={`w-screen ${
           !showEntranceAnimation && "hidden"
-        } h-screen fixed z-[100] top-0 bottom-0 left-0 right-0 bg-red-500`}
+        } h-screen fixed z-[100] top-0 bottom-0 left-0 right-0 bg-leMon`}
       >
         Second
       </motion.div>
@@ -98,7 +98,7 @@ const Entrance = () => {
         }}
         className={`w-screen ${
           !showEntranceAnimation && "hidden"
-        } h-screen fixed z-[200] top-0 bottom-0 left-0 right-0 bg-red-500`}
+        } h-screen fixed z-[200] top-0 bottom-0 left-0 right-0 bg-leMon`}
       >
         <div className="outer">
           <div className="middle">
@@ -153,7 +153,7 @@ const Entrance = () => {
         }}
         className={`w-screen 
         ${!showEntranceAnimation && "hidden"}
-         h-screen fixed z-[400] table top-0 bottom-0 right-0 left-0 bg-orange-400`}
+         h-screen fixed z-[400] table top-0 bottom-0 right-0 left-0 bg-[#13111d]`}
       >
         <div className="outer">
           <div className="middle">

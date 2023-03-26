@@ -10,7 +10,7 @@
   padding: 0;
 }
 body {
-  background-color: #202838;
+  background-color: #13111d;
   /* background-color: red; */
   font-family: "Outfit", Helvetica, sans-serif;
   /* color: rgb(39, 38, 38); */
@@ -46,6 +46,12 @@ html {
   -webkit-background-clip: text;
   background-clip: text;
   /* animation: grow 0.5s linear; */
+}
+
+.cus-shadow {
+  box-shadow: 0px -1px 21px 9px rgba(120, 83, 49, 0.73);
+  -webkit-box-shadow: 0px -1px 21px 9px rgba(120, 83, 49, 0.73);
+  -moz-box-shadow: 0px -1px 21px 9px rgba(120, 83, 49, 0.73);
 }
 
 @keyframes grow {

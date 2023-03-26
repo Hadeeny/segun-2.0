@@ -13,7 +13,7 @@ import material from "../image/material.svg";
 import typescript from "../image/typescript.svg";
 import bootstrap from "../image/bootstrap.svg";
 import { motion } from "framer-motion";
-import white from '../image/white.jpg'
+import white from "../image/white.jpg";
 const About = () => {
   const aboutText = "About Me";
 
@@ -33,9 +33,7 @@ const About = () => {
     { icon: redux, name: "redux" },
     { icon: framer, name: "framer motion" },
   ];
-  const skill2 = [
-
-  ];
+  const skill2 = [];
   // const skill2 = [vite, nextjs, github, redux, framer];
 
   const banner = {
@@ -79,7 +77,7 @@ const About = () => {
          items-start gap-y-2 md:gap-y-6 mx-auto"
     >
       <div className="mt-[4rem] flex items-center w-full">
-        <div className="text-[1.5rem] text-primary">01.</div>
+        <div className="text-[1.5rem] text-rouge">01.</div>
         <motion.div
           variants={banner}
           initial="initial"
@@ -92,7 +90,7 @@ const About = () => {
             </motion.span>
           ))}
         </motion.div>
-        <div className="h-[0.1rem] bg-[#bae67e] w-full"></div>
+        <div className="h-[0.1rem] bg-leMon w-full"></div>
       </div>
       <div className="py-8">
         <p className="text-xl md:max-w-2xl">
@@ -121,8 +119,6 @@ const About = () => {
             </motion.div>
           ))}
         </motion.div>
-        
-        
       </div>
     </section>
   );

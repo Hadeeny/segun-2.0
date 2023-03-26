@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 const Contact = () => {
   const banner = {
@@ -23,7 +23,7 @@ const Contact = () => {
       },
     },
   };
-const title = 'Contact'
+  const title = "Contact";
   const {
     register,
     handleSubmit,
@@ -59,20 +59,20 @@ const title = 'Contact'
         items-start gap-y-2 md:gap-y-6 mx-auto"
     >
       <div className="mt-[4rem] flex items-center w-full">
-        <div className="text-[1.5rem] text-primary">03.</div>
-        <motion.div 
-        variants={banner}
-        initial='initial'
-        whileInView='animate'
-        className="text-[1.5rem] font-oxanium font-bold px-2 min-w-max">
-          {title.split('').map((letters, i)=>(
-            <motion.span
-            key={i}
-            variants={letterAni}
-            >{letters}</motion.span>
+        <div className="text-[1.5rem] text-rouge">03.</div>
+        <motion.div
+          variants={banner}
+          initial="initial"
+          whileInView="animate"
+          className="text-[1.5rem] font-oxanium font-bold px-2 min-w-max"
+        >
+          {title.split("").map((letters, i) => (
+            <motion.span key={i} variants={letterAni}>
+              {letters}
+            </motion.span>
           ))}
         </motion.div>
-        <div className="h-[0.2rem] bg-[#bae67e] w-full"></div>
+        <div className="h-[0.2rem] bg-leMon w-full"></div>
       </div>
       <form
         ref={form}
@@ -85,7 +85,7 @@ const title = 'Contact'
             required
             {...register("from_name", { required: true })}
             // onChange={(e) => setName(e.target.value)}
-            className="outline-none rounded border border-primary bg-transparent p-2"
+            className="outline-none rounded border border-rouge bg-transparent p-2"
             type="text"
             placeholder="enter your name"
           />
@@ -96,7 +96,7 @@ const title = 'Contact'
             required
             {...register("reply_to", { required: true })}
             // onChange={(e) => setEmail(e.target.value)}
-            className="outline-none rounded border border-primary bg-transparent p-2"
+            className="outline-none rounded border border-rouge bg-transparent p-2"
             type="email"
             placeholder="enter your email"
           />
@@ -107,7 +107,7 @@ const title = 'Contact'
             {...register("message", { required: true })}
             required
             // onChange={(e) => setMessage(e.target.value)}
-            className="outline-none rounded border border-primary bg-transparent p-2"
+            className="outline-none rounded border border-rouge bg-transparent p-2"
             type="text"
             placeholder="drop a message"
           />

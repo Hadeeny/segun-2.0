@@ -1,35 +1,36 @@
 import { SiGmail } from "react-icons/si";
 import { MdOutlineOpenInNew } from "react-icons/md";
-import {FaGithub} from 'react-icons/fa'
-import {ImTwitter} from 'react-icons/im'
-import {GrLinkedinOption} from 'react-icons/gr'
+import { FaGithub } from "react-icons/fa";
+import { ImTwitter } from "react-icons/im";
+import { GrLinkedinOption } from "react-icons/gr";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 const Menu = () => {
-  const [show, setShow] = useState(true)
+  const [show, setShow] = useState(true);
   const [showMenu, setShowMenu] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0)
+  const [lastScrollY, setLastScrollY] = useState(0);
   const controlNavbar = () => {
-    if (typeof window !== 'undefined') { 
-      if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
-        setShow(false); 
-      } else { // if scroll up show the navbar
-        setShow(true);  
+    if (typeof window !== "undefined") {
+      if (window.scrollY > lastScrollY) {
+        // if scroll down hide the navbar
+        setShow(false);
+      } else {
+        // if scroll up show the navbar
+        setShow(true);
       }
 
       // remember current page location to use in the next move
-      setLastScrollY(window.scrollY); 
+      setLastScrollY(window.scrollY);
     }
   };
 
-
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', controlNavbar);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
 
       // cleanup function
       return () => {
-        window.removeEventListener('scroll', controlNavbar);
+        window.removeEventListener("scroll", controlNavbar);
       };
     }
   }, [lastScrollY]);
@@ -42,7 +43,7 @@ const Menu = () => {
         animate={{ y: 0, opacity: 1 }}
         className={`w-10/12 fixed top-10    
         rounded-xl px-4 
-        ${!show && 'hidden'}
+        ${!show && "hidden"}
          left-0 right-0 mx-auto flex z-[1400] justify-between items-center md:py-4 py-2`}
       >
         <div
@@ -106,43 +107,67 @@ const Menu = () => {
           } flex-col md:flex-row gap-y-12 left-0 right-0 w-10/12 mx-auto z-[1300]`}
         >
           <div className=" w-full space-y-6 md:w-1/2">
-            <div className=" text-sm tracking-[0.3rem] font-semibold uppercase">Online</div>
+            <div className=" text-sm tracking-[0.3rem] font-semibold uppercase">
+              Online
+            </div>
             <ul className="space-x-4 flex">
               <li>
-                <a href='https://github.com/hadeeny' target='_blank' ><FaGithub size={30} color={"#000000"} /></a>
+                <a href="https://github.com/hadeeny" target="_blank">
+                  <FaGithub size={30} color={"#000000"} />
+                </a>
               </li>
-             
+
               <li>
-                <a href='https://linkedin.com/in/segundeniyi' target='_blank'><GrLinkedinOption size={30} color={"#000000"} /></a>
+                <a href="https://linkedin.com/in/segundeniyi" target="_blank">
+                  <GrLinkedinOption size={30} color={"#000000"} />
+                </a>
               </li>
-              <li onClick={()=>setShowMenu(false)}>
-                <a href='#contact'><SiGmail size={30} color={"#000000"} /></a>
+              <li onClick={() => setShowMenu(false)}>
+                <a href="#contact">
+                  <SiGmail size={30} color={"#000000"} />
+                </a>
               </li>
               <li>
-                <a target='_blank' href='https://twitter.com/segun_deniyi'><ImTwitter size={30} color={"#000000"} /></a>
+                <a target="_blank" href="https://twitter.com/segun_deniyi">
+                  <ImTwitter size={30} color={"#000000"} />
+                </a>
               </li>
             </ul>
           </div>
           <div className="w-full space-y-6 md:w-1/2">
-            <div className="  text-sm tracking-[0.3rem] font-semibold uppercase">Navigation</div>
+            <div className="  text-sm tracking-[0.3rem] font-semibold uppercase">
+              Navigation
+            </div>
             <ul className="space-y-4">
               <li onClick={() => setShowMenu(false)}>
-                <a href="#home" className="text-[2rem] uppercase">
+                <a
+                  href="#home"
+                  className="text-[2rem] hover:tracking-[0.3rem] duration-500 text-gray-200 uppercase"
+                >
                   Home
                 </a>
               </li>
               <li onClick={() => setShowMenu(false)}>
-                <a href="#about" className="text-[2rem] uppercase">
+                <a
+                  href="#about"
+                  className="text-[2rem] hover:tracking-[0.3rem] duration-500 text-gray-200 uppercase"
+                >
                   About
                 </a>
               </li>
               <li onClick={() => setShowMenu(false)}>
-                <a href="#projects" className="text-[2rem] uppercase">
+                <a
+                  href="#projects"
+                  className="text-[2rem] hover:tracking-[0.3rem] duration-500 text-gray-200 uppercase"
+                >
                   Project
                 </a>
               </li>
               <li onClick={() => setShowMenu(false)}>
-                <a href="#contact" className="text-[2rem] uppercase">
+                <a
+                  href="#contact"
+                  className="text-[2rem] hover:tracking-[0.3rem] duration-500 text-gray-200 uppercase"
+                >
                   Contact
                 </a>
               </li>
