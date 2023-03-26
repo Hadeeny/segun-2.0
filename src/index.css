@@ -45,7 +45,7 @@ html {
   background-repeat: no-repeat;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: grow 0.5s linear;
+  /* animation: grow 0.5s linear; */
 }
 
 @keyframes grow {
@@ -75,4 +75,8 @@ html {
     /* background-image: url("./image/white.jpg"); */
     background-position-y: 0rem;
   }
+}
+
+.shad {
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
 }

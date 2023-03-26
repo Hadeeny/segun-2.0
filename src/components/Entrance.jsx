@@ -103,14 +103,14 @@ const Entrance = () => {
         <div className="outer">
           <div className="middle">
             <motion.div
-              initial={{ opacity: 0, x: "-400" }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{
-                duration: 0.3,
-                delay: 1.8,
-                type: "spring",
-                stiffness: 170,
-              }}
+              // initial={{ opacity: 0, x: "-400" }}
+              // animate={{ opacity: 1, x: 0 }}
+              // transition={{
+              //   duration: 0.3,
+              //   delay: 1.8,
+              //   type: "spring",
+              //   stiffness: 170,
+              // }}
               className="text-center text-white text-[1.2rem] md:text-[3rem] font-bold"
             >
               PASSION!
@@ -129,14 +129,14 @@ const Entrance = () => {
         <div className="outer">
           <div className="middle">
             <motion.div
-              initial={{ opacity: 0, y: "4rem" }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.3,
-                delay: 1.4,
-                type: "spring",
-                stiffness: 130,
-              }}
+              // initial={{ opacity: 0, y: "4rem" }}
+              // animate={{ opacity: 1, y: 0 }}
+              // transition={{
+              //   duration: 0.3,
+              //   delay: 1.4,
+              //   type: "spring",
+              //   stiffness: 130,
+              // }}
               className="text-center text-[1.2rem] md:text-[3rem] font-bold"
             >
               HARDWORK!
