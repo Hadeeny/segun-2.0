@@ -48,7 +48,7 @@ const Menu = () => {
       >
         <div
           className={`text-secondary ${
-            showMenu && "text-black"
+            showMenu && "text-gray-200"
           } font-bold font-dancing text-xl`}
         >
           {"<Deniyi/>"}
@@ -114,10 +114,10 @@ const Menu = () => {
           } flex-col md:flex-row gap-y-12 left-0 right-0 w-10/12 mx-auto z-[1300]`}
         >
           <div className=" w-full space-y-6 md:w-1/2">
-            <div className=" text-sm tracking-[0.3rem] font-semibold uppercase">
+            <div className=" text-sm text-gray-200 tracking-[0.3rem] font-semibold uppercase">
               Online
             </div>
-            <ul className="space-x-4 flex">
+            <ul className="space-x-4 items-center flex">
               <li>
                 <a href="https://github.com/hadeeny" target="_blank">
                   <FaGithub size={30} color={"#000000"} />
@@ -126,23 +126,23 @@ const Menu = () => {
 
               <li>
                 <a href="https://linkedin.com/in/segundeniyi" target="_blank">
-                  <GrLinkedinOption size={30} color={"#000000"} />
+                  <GrLinkedinOption size={30} color={"rgb(6 182 212)"} />
                 </a>
               </li>
               <li onClick={() => setShowMenu(false)}>
                 <a href="#contact">
-                  <SiGmail size={30} color={"#000000"} />
+                  <SiGmail size={30} color={"rgb(248 113 113)"} />
                 </a>
               </li>
               <li>
                 <a target="_blank" href="https://twitter.com/segun_deniyi">
-                  <ImTwitter size={30} color={"#000000"} />
+                  <ImTwitter size={30} color={"rgb(96 165 250)"} />
                 </a>
               </li>
             </ul>
           </div>
           <div className="w-full space-y-6 md:w-1/2">
-            <div className="  text-sm tracking-[0.3rem] font-semibold uppercase">
+            <div className="  text-sm text-gray-200 tracking-[0.3rem] font-bold uppercase">
               Navigation
             </div>
             <ul className="space-y-4">

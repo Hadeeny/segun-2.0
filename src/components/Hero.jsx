@@ -80,21 +80,11 @@ const Hero = () => {
         I’m a software engineer specialized in building fast, responsive &
         exceptional digital experiences
       </motion.p>
-      {/* <motion.div
-        transition={{ delay: 5.2, duration: 1 }}
-        initial={{
-          y: 200,
-          clipPath: "polygon(0 0, 0% 0, 0% 0%, 0% 0%)",
-        }}
-        animate={{
-          y: 0,
-          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-        }}
-      > */}
+
       <a
         href="#projects"
         className="leading-[7rem] z-10  
-        text-xl mt-[2rem] tracking-[0.4rem] duration-300 text-leMon hover:tracking-[0.6rem] hover:text-white w-[12rem] shadow-3xl flex justify-center h-[2.5rem] items-center border border-leMon relative md:w-[18rem] md:h-[4rem] group-disabled: md:group"
+        text-xl mt-[2rem] tracking-[0.4rem] duration-500 bg-gradient-to-l rounded-lg from-orange-400 to-cyan-500 text-white hover:tracking-[0.6rem] w-[12rem] shadow-md flex justify-center h-[2.5rem] items-center relative md:w-[18rem] md:h-[4rem]"
       >
         Projects
       </a>

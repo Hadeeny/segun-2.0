@@ -15,7 +15,7 @@ module.exports = {
         rouge: "#853bce",
       },
       boxShadow: {
-        "3xl": "-2px 0px 14px 5px rgba(66, 148, 110, 0.4)",
+        "3xl": "-2px 0px 14px 5px rgba(106, 208, 200, 0.4)",
       },
     },
   },
