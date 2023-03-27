@@ -85,6 +85,22 @@ const Projects = () => {
                   </motion.div>
                 ))}
               </motion.div>
+              <div className="flex space-x-2">
+                <a
+                  target="_blank"
+                  aria-label="open page"
+                  href={`${project.link}`}
+                >
+                  <RiGithubLine size={30} color={"#eee"} />
+                </a>
+                <a
+                  target="_blank"
+                  aria-label="view code"
+                  href={`${project.link}`}
+                >
+                  <MdOutlineOpenInNew size={30} color={"#eee"} />
+                </a>
+              </div>
             </div>
             {/* second flex itme */}
             <div className="w-full flex px-8 items-end md:w-1/2">
