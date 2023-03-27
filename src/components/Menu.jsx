@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import { ImTwitter } from "react-icons/im";
 import { GrLinkedinOption } from "react-icons/gr";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 const Menu = () => {
   const [show, setShow] = useState(true);
   const [showMenu, setShowMenu] = useState(false);
