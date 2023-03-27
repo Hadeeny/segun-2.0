@@ -5,7 +5,7 @@ import { MdOutlineOpenInNew } from "react-icons/md";
 import { IconContext } from "react-icons";
 import { Link as a } from "react-router-dom";
 const Projects = () => {
-  const title = "Some stuffs I made";
+  const title = "Featured Projects";
 
   const banner = {
     animate: {
@@ -17,13 +17,14 @@ const Projects = () => {
   };
 
   const letterAni = {
-    initial: { opacity: 0, x: 600 },
+    initial: { y: 10, clipPath: "polygon(0 0, 0% 0, 0% 0%, 0% 0%)" },
     animate: {
-      opacity: 1,
-      x: 0,
+      // opacity: 1,
+      y: 0,
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
       transition: {
         // ease: [0.6, 0.01, -0.05, 0.95, 0.3],
-        duration: 1,
+        duration: 0.2,
       },
     },
   };
@@ -40,7 +41,7 @@ const Projects = () => {
       className="w-10/12 text-secondary flex flex-col 
         items-start gap-y-2 md:gap-y-6 mx-auto"
     >
-      <div className="mt-[4rem] flex items-center w-full">
+      <div className="my-[4rem] flex items-center w-full">
         <div className="text-[1.5rem] text-rouge">02.</div>
         <motion.div
           variants={banner}
@@ -61,76 +62,47 @@ const Projects = () => {
         return (
           <div
             key={i}
-            className={`flex my-8 flex-col w-full items-center justify-center ${switchProject(
-              i
-            )}`}
+            className="w-full bg-gradient-to-t flex flex-col justify-between md:flex-row odd:from-rouge odd:to-green-400 even:from-orange-400 even:to-cyan-500 mb-8 mx-auto rounded-3xl xl:w-[60rem] border-gray-300 border md:h-[35rem]"
           >
-            <motion.div
-              initial={{ opacity: 0, x: i % 2 == 0 ? 20 : -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
-              className="w-full group md:w-1/2 relative"
-            >
-              <div className=" w-full h-[18rem] md:h-[22rem]">
-                <img src={project.image} className=" h-full object-cover" />
-              </div>
-              <div
-                className="absolute top-0 group-hover:w-0 duration-500 h-full 
-                md:opacity-50 opacity-50 bg-black  md:bg-yellow-900 w-full"
-              ></div>
-              <div className="h-full w-[3px] absolute top-0 right-0 group-hover:left-0 bg-primary" />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: i % 2 == 0 ? 20 : -20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              className={`md:w-1/2 absolute md:static w-10/12 px-4 py-2 md:px-0 lg:ml-[-5rem] 
-              ml-0 z-[10] flex flex-col justify-end bg-black/40 md:bg-transparent gap-y-4 items-start ${switchRow(
-                i
-              )} ${
-                i % 2 === 0 ? "md:items-end md:text-right" : "md:items-start"
-              } h-[18rem]`}
-            >
-              <div>
-                <div className="text-primary">Featured project</div>
-                <div className="text-xl font-semibold md:text-[1.5rem]">
-                  {project.title}
-                </div>
-              </div>
-              <div
-                className={`w-full md:block hidden p-0 md:p-6 text-gray-200 bg-[#2F3B54] md:backdrop-blur-xl ${
-                  i % 2 === 0 ? "md:text-right" : "md:text-left"
-                } rounded-md`}
+            {/* first flex item */}
+            <div className="w-full space-y-8 p-8 flex-col md:w-1/2">
+              <h3 className="text-xl md:text-3xl font-bold">{project.title}</h3>
+              <p className="font-normal text-lg ">{project.info}</p>
+              <motion.div
+                // variants={banner}
+                // initial="initial"
+                // whileInView="animate"
+                className="flex gap-x-4 flex-wrap w-full"
               >
-                {project.info}
-              </div>
-              <ul className="flex justify-start md:justify-end text-sm space-x-2">
-                {project.skill.map((skill, i) => (
-                  <li
+                {project.skill.map((item, i) => (
+                  <motion.div
+                    // variants={letterAni}
                     key={i}
-                    className="p-0 md:px-2 md:py-1 text-leMon text-[10px] rounded-xl md:bg-transparent md:text-white md:border md:border-primary "
+                    className="py-1 flex items-center text-gray-200"
                   >
-                    {skill}
-                  </li>
+                    <img className="w-4 h-4" src={item.icon} />
+                    <p className="block ml-2">{item.name}</p>
+                  </motion.div>
                 ))}
-              </ul>
-              <div className="flex space-x-2">
-                <a
-                  target="_blank"
-                  aria-label="open page"
-                  href={`${project.link}`}
-                >
-                  <RiGithubLine size={30} color={"#ef6b73"} />
-                </a>
-                <a
-                  target="_blank"
-                  aria-label="view code"
-                  href={`${project.link}`}
-                >
-                  <MdOutlineOpenInNew size={30} color={"#bae67e"} />
-                </a>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
+            {/* second flex itme */}
+            <div className="w-full flex px-8 items-end md:w-1/2">
+              <motion.div
+                transition={{ duration: 1 }}
+                initial={{
+                  y: "100%",
+                  clipPath: "polygon(0 0, 0% 0, 0% 0%, 0% 0%)",
+                }}
+                whileInView={{
+                  y: 0,
+                  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+                }}
+                className=""
+              >
+                <img src={project.image} />
+              </motion.div>
+            </div>
           </div>
         );
       })}

@@ -38,10 +38,10 @@ const Menu = () => {
   return (
     <>
       <motion.div
-        transition={{ delay: 5.6 }}
+        transition={{ duration: 1, delay: 5.6 }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className={`w-10/12 fixed top-10    
+        className={`w-10/12  fixed top-10    
         rounded-xl px-4 
         ${!show && "hidden"}
          left-0 right-0 mx-auto flex z-[1400] justify-between items-center md:py-4 py-2`}

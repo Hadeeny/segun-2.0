@@ -6,6 +6,22 @@ import webisoft from "../image/webisoft.jpg";
 import home from "../image/home rental.jpg";
 import movie from "../image/moviemania.jpg";
 import resumeA from "../image/resumeA.jpg";
+import html from "../image/html-svgrepo-com.svg";
+import css from "../image/css.svg";
+import javascript from "../image/javascript.svg";
+import api from "../image/api.svg";
+import flutterwave from "../image/flutterwave.svg";
+import redux from "../image/redux.svg";
+import tailwindcss from "../image/tailwindcss.svg";
+import reactjs from "../image/reactjs.svg";
+import paypal from "../image/paypal.svg";
+import firebase from "../image/firebase.svg";
+import nextjs from "../image/nextjs.svg";
+import mongodb from "../image/mongodb.svg";
+import typescript from "../image/typescript.svg";
+import bootstrap from "../image/bootstrap.svg";
+import nodejs from "../image/nodejs.svg";
+
 export const myProjects = [
   {
     title: "Resume builder/generator",
@@ -15,7 +31,12 @@ export const myProjects = [
         customize CVs, it is mobile and desktop friendly as opposed to other platforms 
         that are usually desktop-centric`,
     image: resumeA,
-    skill: ["nextjs", "tailwindcss", "redux-toolkit", "typescript"],
+    skill: [
+      { name: "nextjs", icon: nextjs },
+      { name: "tailwindcss", icon: tailwindcss },
+      { name: "redux toolkit", icon: redux },
+      { name: "typescript", icon: typescript },
+    ],
   },
   {
     title: "Music web app",
@@ -25,7 +46,12 @@ export const myProjects = [
         functionalities such as music search, adding music to favourite, music like,
         and so on`,
     image: musica,
-    skill: ["reactjs", "tailwindcss", "redux", "api"],
+    skill: [
+      { name: "reactjs", icon: reactjs },
+      { name: "tailwindcss", icon: tailwindcss },
+      { name: "redux toolkit", icon: redux },
+      { name: "api", icon: api },
+    ],
   },
   {
     title: "Artsy store",
@@ -35,7 +61,13 @@ export const myProjects = [
         collections from around the world, the website is user authenticated, and intergrated
         with a payment system as well as other features`,
     image: artsy,
-    skill: ["reactjs", "tailwindcss", "redux", "firebase", "flutterwave"],
+    skill: [
+      { name: "reactjs", icon: reactjs },
+      { name: "tailwindcss", icon: tailwindcss },
+      { name: "redux toolkit", icon: redux },
+      { name: "firebase", icon: firebase },
+      { name: "flutterwave", icon: flutterwave },
+    ],
   },
   {
     title: "Proshop e-commerce",
@@ -44,7 +76,14 @@ export const myProjects = [
         Proshop is a fullstack and fully functional e-commerce store, 
         with abilities to add product reviews, product rating, payment options etc`,
     image: proshop,
-    skill: ["reactjs", "bootstrap", "redux", "nodejs", "mongodb", "paypal"],
+    skill: [
+      { name: "reactjs", icon: reactjs },
+      { name: "bootstrap", icon: bootstrap },
+      { name: "redux toolkit", icon: redux },
+      { name: "nodejs", icon: nodejs },
+      { name: "mongodb", icon: mongodb },
+      { name: "paypal", icon: paypal },
+    ],
   },
   {
     title: "Crappo cryto",
@@ -53,7 +92,10 @@ export const myProjects = [
        This is a landing page with crypto-currency services such as mining assets like bitcoin, etherium, litecoin etc.
        It is the fastest and secure platform to invest in crypto`,
     image: crappo,
-    skill: ["reactjs", "tailwindcss"],
+    skill: [
+      { name: "reactjs", icon: reactjs },
+      { name: "tailwindcss", icon: tailwindcss },
+    ],
   },
   {
     title: "Webisoft clone",
@@ -63,7 +105,10 @@ export const myProjects = [
          software engineering. It automates its client's bussiness, connects their systems and assembles
          tools for its clients`,
     image: webisoft,
-    skill: ["reactjs", "tailwindcss"],
+    skill: [
+      { name: "reactjs", icon: reactjs },
+      { name: "tailwindcss", icon: tailwindcss },
+    ],
   },
   {
     title: "Moviemania",
@@ -72,7 +117,11 @@ export const myProjects = [
         A simple movie app that consumes themoviedb.org api to get 
         basic information about new movies`,
     image: movie,
-    skill: ["nextjs", "tailwindcss", "api"],
+    skill: [
+      { name: "nextjs", icon: nextjs },
+      { name: "tailwindcss", icon: tailwindcss },
+      { name: "api", icon: api },
+    ],
   },
   {
     title: "Home rental",
@@ -80,6 +129,10 @@ export const myProjects = [
     info: `
         A home rental service landing page`,
     image: home,
-    skill: ["html", "tailwindcss", "javascript"],
+    skill: [
+      { name: "html", icon: html },
+      { name: "tailwindcss", icon: tailwindcss },
+      { name: "javascript", icon: javascript },
+    ],
   },
 ];
