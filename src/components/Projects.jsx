@@ -74,10 +74,10 @@ const Projects = () => {
                 // whileInView="animate"
                 className="flex gap-x-4 flex-wrap w-full"
               >
-                {project.skill.map((item, i) => (
+                {project.skill.map((item, j) => (
                   <motion.div
                     // variants={letterAni}
-                    key={i}
+                    key={j}
                     className="py-1 flex items-center text-gray-200"
                   >
                     <img className="w-4 h-4" src={item.icon} />
