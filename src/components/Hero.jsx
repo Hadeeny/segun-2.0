@@ -40,7 +40,7 @@ const Hero = () => {
           y: 0,
           clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
         }}
-        className="text-leMon font-oxanium text-xl mb-1 md:text-3xl"
+        className="text-leMon font-oxanium text-xl mb-4 md:mb-1 md:text-3xl"
       >
         Hi, my name is
       </motion.h2>
@@ -94,7 +94,7 @@ const Hero = () => {
       <a
         href="#projects"
         className="leading-[7rem] z-10  
-        text-xl mt-[2rem] tracking-[0.4rem] duration-300 text-leMon hover:tracking-[0.6rem] hover:text-white w-[12rem] shadow-3xl flex justify-center h-[2.5rem] items-center border border-leMon relative md:w-18 md:h-4 group-disabled: md:group"
+        text-xl mt-[2rem] tracking-[0.4rem] duration-300 text-leMon hover:tracking-[0.6rem] hover:text-white w-[12rem] shadow-3xl flex justify-center h-[2.5rem] items-center border border-leMon relative md:w-[18rem] md:h-[4rem] group-disabled: md:group"
       >
         Projects
       </a>
