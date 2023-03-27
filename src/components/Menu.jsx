@@ -38,9 +38,9 @@ const Menu = () => {
   return (
     <>
       <motion.div
-        transition={{ delay: 5.5, type: "spring", duration: 1 }}
-        initial={{ opacity: 0, y: 200 }}
-        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 5.6 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         className={`w-10/12 fixed top-10    
         rounded-xl px-4 
         ${!show && "hidden"}
@@ -75,6 +75,13 @@ const Menu = () => {
           />
         </div>
       </motion.div>
+      {/* Decoy */}
+      <motion.div
+        transition={{ delay: 6, duration: 0.4 }}
+        initial={{ y: 0 }}
+        animate={{ y: "-100%" }}
+        className="fixed w-full h-[8rem] bg-primary z-[99]"
+      ></motion.div>
       {/* Menui slider */}
       <motion.div className="relative w-full h-full">
         <div
