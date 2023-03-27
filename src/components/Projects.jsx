@@ -62,12 +62,15 @@ const Projects = () => {
         return (
           <div
             key={i}
-            className="w-full bg-gradient-to-t flex flex-col justify-between md:flex-row odd:from-rouge odd:to-green-400 even:from-orange-400 even:to-cyan-500 mb-8 mx-auto rounded-3xl xl:w-[60rem] border-gray-300 border md:h-[35rem]"
+            className="w-full bg-gradient-to-t flex flex-col justify-between 
+            md:flex-row odd:from-rouge odd:to-green-400 
+            even:from-orange-400 even:to-cyan-500 
+            mb-8 mx-auto rounded-3xl xl:w-[60rem] border-gray-300 border md:h-[35rem]"
           >
             {/* first flex item */}
-            <div className="w-full space-y-4 md:space-y-8 p-8 flex-col md:w-1/2">
-              <h3 className="text-xl md:text-3xl font-bold">{project.title}</h3>
-              <p className="font-normal text-sm md:text-lg ">{project.info}</p>
+            <div className="w-full space-y-4 md:space-y-8 p-4 md:p-8 flex-col md:w-1/2">
+              <h3 className="text-3xl font-bold">{project.title}</h3>
+              <p className="font-normal ">{project.info}</p>
               <motion.div
                 // variants={banner}
                 // initial="initial"
