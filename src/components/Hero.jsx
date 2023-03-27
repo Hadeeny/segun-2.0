@@ -94,7 +94,7 @@ const Hero = () => {
       <a
         href="#projects"
         className="leading-[7rem] z-10  
-        text-xl tracking-[0.4rem] duration-300 text-leMon hover:tracking-[0.6rem] hover:text-white w-[18rem] shadow-3xl flex justify-center h-[4rem] items-center border border-leMon relative group-disabled: md:group"
+        text-xl mt-[2rem] tracking-[0.4rem] duration-300 text-leMon hover:tracking-[0.6rem] hover:text-white w-[12rem] shadow-3xl flex justify-center h-[2.5rem] items-center border border-leMon relative md:w-18 md:h-4 group-disabled: md:group"
       >
         Projects
       </a>
