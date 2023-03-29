@@ -30,7 +30,7 @@ const Contact = () => {
     formState: { errors },
     resetField,
   } = useForm();
-  const form = useRef();
+  const form = useRef(null);
 
   const submitHandler = (data) => {
     emailjs
@@ -54,7 +54,7 @@ const Contact = () => {
   };
   return (
     <section
-      id=""
+      id="contact"
       className="w-10/12 text-secondary h-screen flex flex-col 
         items-start gap-y-2 md:gap-y-6 mx-auto"
     >
