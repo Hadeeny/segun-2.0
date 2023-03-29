@@ -76,14 +76,14 @@ const Contact = () => {
       </div>
       <form
         ref={form}
-        // onSubmit={handleSubmit(submitHandler)}
-        // className=" space-y-5 mt-[3rem] w-full md:w-1/2"
+        onSubmit={handleSubmit(submitHandler)}
+        className=" space-y-5 mt-[3rem] w-full md:w-1/2"
       >
         <div className="flex flex-col gap-y-2">
           <label>Name</label>
           <input
             required
-            {...register("from_name", { required: true })}
+            // {...register("from_name", { required: true })}
             // onChange={(e) => setName(e.target.value)}
             className="outline-none rounded border border-rouge bg-transparent p-2"
             type="text"
@@ -94,7 +94,7 @@ const Contact = () => {
           <label>Email</label>
           <input
             required
-            {...register("reply_to", { required: true })}
+            // {...register("reply_to", { required: true })}
             // onChange={(e) => setEmail(e.target.value)}
             className="outline-none rounded border border-rouge bg-transparent p-2"
             type="email"
@@ -104,7 +104,7 @@ const Contact = () => {
         <div className="flex flex-col gap-y-2">
           <label>Message</label>
           <textarea
-            {...register("message", { required: true })}
+            // {...register("message", { required: true })}
             required
             // onChange={(e) => setMessage(e.target.value)}
             className="outline-none rounded border border-rouge bg-transparent p-2"

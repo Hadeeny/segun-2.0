@@ -40,7 +40,7 @@ const Hero = () => {
           y: 0,
           clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
         }}
-        className="text-leMon font-oxanium text-xl mb-4 md:mb-1 md:text-3xl"
+        className="text-gray-400 font-oxanium text-xl mb-4 md:mb-1 md:text-3xl"
       >
         Hi, my name is
       </motion.h2>
@@ -77,15 +77,17 @@ const Hero = () => {
         }}
         className="max-w-max font-oxanium text-gray-200 md:max-w-xl text-lg md:text-xl"
       >
-        I’m a software engineer specialized in building fast, responsive &
-        exceptional digital experiences
+        I’m a{" "}
+        <span className="text-cyan-500 font-medium">software engineer</span>{" "}
+        specialized in building fast, responsive & exceptional digital
+        experiences
       </motion.p>
 
       <a
         href="#projects"
         className="leading-[7rem] z-10  
         md:text-xl text-lg mt-[2rem] tracking-[0.4rem] duration-500 bg-gradient-to-l 
-        rounded-lg from-orange-400 to-cyan-500 text-white 
+        rounded-lg from-rouge to-cyan-500 text-white 
         hover:tracking-[0.6rem] w-[12rem] shadow-md flex justify-center 
         h-[2.8rem] items-center relative md:w-[18rem] md:h-[4rem]"
       >
