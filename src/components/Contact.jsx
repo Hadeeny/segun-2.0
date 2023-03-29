@@ -54,7 +54,7 @@ const Contact = () => {
   };
   return (
     <section
-      id="contact"
+      id=""
       className="w-10/12 text-secondary h-screen flex flex-col 
         items-start gap-y-2 md:gap-y-6 mx-auto"
     >
@@ -83,7 +83,7 @@ const Contact = () => {
           <label>Name</label>
           <input
             required
-            // {...register("from_name", { required: true })}
+            {...register("from_name", { required: true })}
             // onChange={(e) => setName(e.target.value)}
             className="outline-none rounded border border-rouge bg-transparent p-2"
             type="text"
@@ -94,7 +94,7 @@ const Contact = () => {
           <label>Email</label>
           <input
             required
-            // {...register("reply_to", { required: true })}
+            {...register("reply_to", { required: true })}
             // onChange={(e) => setEmail(e.target.value)}
             className="outline-none rounded border border-rouge bg-transparent p-2"
             type="email"
@@ -104,7 +104,7 @@ const Contact = () => {
         <div className="flex flex-col gap-y-2">
           <label>Message</label>
           <textarea
-            // {...register("message", { required: true })}
+            {...register("message", { required: true })}
             required
             // onChange={(e) => setMessage(e.target.value)}
             className="outline-none rounded border border-rouge bg-transparent p-2"
