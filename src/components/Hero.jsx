@@ -84,7 +84,10 @@ const Hero = () => {
       <a
         href="#projects"
         className="leading-[7rem] z-10  
-        text-xl mt-[2rem] tracking-[0.4rem] duration-500 bg-gradient-to-l rounded-lg from-orange-400 to-cyan-500 text-white hover:tracking-[0.6rem] w-[12rem] shadow-md flex justify-center h-[2.5rem] items-center relative md:w-[18rem] md:h-[4rem]"
+        md:text-xl text-lg mt-[2rem] tracking-[0.4rem] duration-500 bg-gradient-to-l 
+        rounded-lg from-orange-400 to-cyan-500 text-white 
+        hover:tracking-[0.6rem] w-[12rem] shadow-md flex justify-center 
+        h-[2.8rem] items-center relative md:w-[18rem] md:h-[4rem]"
       >
         Projects
       </a>

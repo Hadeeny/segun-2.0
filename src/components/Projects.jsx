@@ -90,7 +90,7 @@ const Projects = () => {
                   </motion.div>
                 ))}
               </motion.div>
-              <div className="flex font-bold space-x-4">
+              <div className="flex justify-end md:justify-start font-bold space-x-4">
                 <a
                   target="_blank"
                   aria-label="open page"
@@ -116,7 +116,7 @@ const Projects = () => {
               </div>
             </div>
             {/* second flex itme */}
-            <div className="w-full flex px-8 items-end md:w-1/2">
+            <div className="w-full flex md:px-8 px-4 items-end md:w-1/2">
               <motion.div
                 transition={{ duration: 1 }}
                 initial={{

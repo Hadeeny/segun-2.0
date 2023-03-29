@@ -11,12 +11,12 @@ const Screens = () => {
       // transition={{delay: 4, duration:1}}
       // initial={{x:100}}
       // animate={{x: 0}}
-      className=" relative z-[9] bg-[#13111d] top-0 left-0"
+      className=" relative z-[9] bg-primary top-0 left-0"
     >
       <Hero />
       <About />
-      <Projects />
       <Contact />
+      <Projects />
     </motion.div>
   );
 };
