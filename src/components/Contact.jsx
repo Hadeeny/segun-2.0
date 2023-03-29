@@ -76,8 +76,8 @@ const Contact = () => {
       </div>
       <form
         ref={form}
-        onSubmit={handleSubmit(submitHandler)}
-        className=" space-y-5 mt-[3rem] w-full md:w-1/2"
+        // onSubmit={handleSubmit(submitHandler)}
+        // className=" space-y-5 mt-[3rem] w-full md:w-1/2"
       >
         <div className="flex flex-col gap-y-2">
           <label>Name</label>
