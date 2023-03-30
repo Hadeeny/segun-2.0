@@ -1,7 +1,16 @@
 import { useState, useEffect } from "react";
 import Screens from "./Screens";
+import lottie from "../image/coder.json";
+import { useLottie } from "lottie-react";
+import segun from "../image/segun.jpg";
 import { motion, AnimatePresence, spring } from "framer-motion";
 const Entrance = () => {
+  const options = {
+    animationData: lottie,
+    loop: true,
+  };
+
+  const { View } = useLottie(options);
   const title = "EXCELLENCE!";
   const banner = {
     animate: {
@@ -12,16 +21,6 @@ const Entrance = () => {
     },
   };
 
-  // const letterAni = {
-  //   initial: { scale: 0, x: 500 },
-  //   animate: {
-  //     scale: 1,
-  //     x: 0,
-  //     transition: {
-  //       duration: 0.8,
-  //     },
-  //   },
-  // };
   useEffect(() => {
     setTimeout(() => {
       setShowEntranceAnimation(false);
@@ -55,84 +54,15 @@ const Entrance = () => {
               variants={banner}
               initial="initial"
               whileInView="animate"
-              className={`fixed  
+              className={`fixed
             top-0 bottom-0 h-screen w-screen z-[500] bg-transparent flex justify-center items-center left-0 right-0`}
             >
-              <div className="text-center text-[1.2rem] md:text-[3rem] font-bold min-w-max ">
-                {title}
-              </div>
+              <div className="w-11/12 md:w-1/2">{View}</div>
             </motion.div>
           </div>
         </div>
       </motion.div>
       {/* decoy */}
-      <motion.div
-        initial={{ y: 0 }}
-        animate={{ y: "-100%" }}
-        transition={{
-          delay: 4.8,
-          duration: 0.9,
-          ease: [0.74, 0.06, 0.4, 0.92],
-        }}
-        className={`w-screen ${
-          !showEntranceAnimation && "hidden"
-        } h-screen fixed z-[100] top-0 bottom-0 left-0 right-0 bg-leMon`}
-      >
-        Second
-      </motion.div>
-      {/* decoy ends */}
-      <motion.div
-        initial={{ display: "block" }}
-        animate={{ display: "none" }}
-        transition={{
-          delay: 3.5,
-        }}
-        className={`w-screen ${
-          !showEntranceAnimation && "hidden"
-        } h-screen fixed z-[200] top-0 bottom-0 left-0 right-0 bg-leMon`}
-      >
-        <div className="outer">
-          <div className="middle">
-            <motion.div className="text-center text-white text-[1.2rem] md:text-[3rem] font-bold">
-              PASSION!
-            </motion.div>
-          </div>
-        </div>
-      </motion.div>
-      <motion.div
-        initial={{ display: "block" }}
-        animate={{ display: "none" }}
-        transition={{ delay: 2.5 }}
-        className={`w-screen ${
-          !showEntranceAnimation && "hidden"
-        } h-screen fixed z-[300] top-0 bottom-0 right-0 left-0 bg-rouge`}
-      >
-        <div className="outer">
-          <div className="middle">
-            <motion.div className="text-center text-[1.2rem] md:text-[3rem] font-bold">
-              HARDWORK!
-            </motion.div>
-          </div>
-        </div>
-      </motion.div>
-      <motion.div
-        initial={{ display: "block" }}
-        animate={{ display: "none" }}
-        transition={{
-          delay: 1.5,
-        }}
-        className={`w-screen 
-        ${!showEntranceAnimation && "hidden"}
-         h-screen fixed z-[400] table top-0 bottom-0 right-0 left-0 bg-[#13111d]`}
-      >
-        <div className="outer">
-          <div className="middle">
-            <div className="text-center text-[1.2rem] md:text-[3rem] font-bold reveal-text">
-              CREATIVITY!
-            </div>
-          </div>
-        </div>
-      </motion.div>
     </motion.section>
   );
 };
