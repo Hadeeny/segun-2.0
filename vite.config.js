@@ -18,7 +18,7 @@ export default defineConfig({
       includeAssets: ["favicon.ico", "apple-touch-icon.png", "masked-icon.svg"],
       manifest: {
         name: "Oluwasegun's Portfolio",
-        short_name: "Oluwasegun",
+        short_name: "Oluwasegun's Portfolio",
         description:
           "A self-taught Front End Developer specialized in building fast, responsive & exceptional digital experiences",
         icons: [
