@@ -86,3 +86,10 @@ html {
 .shad {
   box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
 }
+
+.clip-active {
+  clip-path: circle(200vh at 89% 10%);
+}
+.clip-inactive {
+  clip-path: circle(0px at 89% 10%);
+}
