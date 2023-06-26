@@ -55,7 +55,7 @@ const Menu = () => {
         </div>
         <div
           onClick={() => setShowMenu(!showMenu)}
-          className={`flex bg-[#202838] w-12 h-12 rounded-full flex-col cursor-pointer z-[1400] 
+          className={`flex bg-leMon w-12 h-12 rounded-full flex-col cursor-pointer z-[1400] 
           items-center justify-center gap-y-2`}
         >
           <div
@@ -85,33 +85,19 @@ const Menu = () => {
       {/* Menui slider */}
       <motion.div className="relative w-full h-full">
         <div
-          className={`bg-leMon fixed top-0 left-0 z-[1200] w-1/4 duration-500 ${
-            showMenu ? "h-full" : "h-0 delay-[1200ms]"
-          }`}
-        ></div>
-        <div
-          className={`bg-leMon duration-500 fixed top-0 left-[25%] right-0 z-[1200] w-1/4 ${
-            showMenu ? "h-full delay-[400ms]" : "h-0 delay-[800ms]"
-          }`}
-        ></div>
-        <div
-          className={`bg-leMon duration-500  fixed top-0 left-[50%] right-0 z-[1200] w-1/4 ${
-            showMenu ? "h-full delay-[800ms]" : "h-0 delay-[400ms]"
-          }`}
-        ></div>
-        <div
-          className={`bg-leMon duration-500  fixed top-0 right-0 z-[1200] w-1/4 ${
-            showMenu ? "h-full delay-[1200ms]" : "h-0 delay-[100ms]"
+          className={`bg-leMon fixed top-0 left-0 h-full z-[1200] w-full ${
+            showMenu
+              ? "clip-active duration-1000"
+              : "clip-inactive duration-1000"
           }`}
         ></div>
         <motion.div
-          initial={{ opacity: 0, y: 100 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          // exit={{ y: -100 }}
-          transition={{ duration: 0.8, delay: 1.4 }}
+          transition={{ duration: 0.4, delay: 0.8 }}
           className={`fixed top-[25%]  flex ${
             !showMenu && "hidden"
-          } flex-col md:flex-row gap-y-12 left-0 right-0 w-10/12 mx-auto z-[1300]`}
+          } flex-col md:flex-row  gap-y-12 left-0 right-0 w-10/12 mx-auto z-[1300]`}
         >
           <div className=" w-full space-y-6 md:w-1/2">
             <div className=" text-sm text-gray-200 tracking-[0.3rem] font-semibold uppercase">
