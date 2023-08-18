@@ -9,6 +9,11 @@
   margin: 0;
   padding: 0;
 }
+:root {
+  --width: 100vw;
+  --height: 100vh;
+  --hyp: calc((var(--height) * * 2 + var(--width) * * 2) * * 1 / 2);
+}
 body {
   background-color: #13111d;
   /* background-color: red; */
@@ -88,8 +93,19 @@ html {
 }
 
 .clip-active {
-  clip-path: circle(200vh at 89% 10%);
+  clip-path: circle(calc(var(--height) + var(--width)) at 94% 7%);
 }
 .clip-inactive {
-  clip-path: circle(0px at 89% 10%);
+  clip-path: circle(0px at 94% 7%);
+}
+
+@media (max-width: 500px) {
+  .clip-active {
+    clip-path: circle(calc(var(--height) + var(--width)) at 86.5% 6%);
+    /* background-color: aliceblue; */
+  }
+  .clip-inactive {
+    clip-path: circle(0px at 86.5% 5%);
+    /* background-color: aquamarine; */
+  }
 }

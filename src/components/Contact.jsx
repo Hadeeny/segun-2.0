@@ -58,26 +58,29 @@ const Contact = () => {
       className="w-10/12 text-secondary h-screen flex flex-col 
         items-start gap-y-2 md:gap-y-6 mx-auto"
     >
-      <div className="mt-[4rem] flex items-center w-full">
-        <div className="text-[1.5rem] text-rouge">03.</div>
+      <div
+        className="my-[4rem] flex sticky bg-transparent 
+      backdrop-blur-md  py-2 top-0 items-center w-full"
+      >
+        <div className="text-[1.5rem]  text-rouge">03.</div>
         <motion.div
           variants={banner}
           initial="initial"
           whileInView="animate"
           className="text-[1.5rem] font-oxanium font-bold px-2 min-w-max"
         >
-          {title.split("").map((letters, i) => (
-            <motion.span key={i} variants={letterAni}>
-              {letters}
+          {title.split("").map((letter, i) => (
+            <motion.span variants={letterAni} key={i}>
+              {letter}
             </motion.span>
           ))}
         </motion.div>
-        <div className="h-[0.2rem] bg-leMon w-full"></div>
+        {/* <div className="h-[0.2rem] bg-leMon w-full"></div> */}
       </div>
       <form
         ref={form}
         onSubmit={handleSubmit(submitHandler)}
-        className=" space-y-5 mt-[3rem] w-full md:w-1/2"
+        className=" space-y-5 pb-[10rem] mt-[3rem] w-full md:w-1/2"
       >
         <div className="flex flex-col gap-y-2">
           <label>Name</label>

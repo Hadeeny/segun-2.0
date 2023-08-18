@@ -41,10 +41,10 @@ const Menu = () => {
         transition={{ duration: 1, delay: 5.6 }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className={`w-10/12  fixed top-10    
-        rounded-xl px-4 
+        className={`w-11/12  fixed top-4 md:top-1    
+        rounded-xl px-2 
         ${!show && "hidden"}
-         left-0 right-0 mx-auto flex z-[1400] justify-between items-center md:py-4 py-2`}
+         left-0 right-0 mx-auto flex z-[1400] justify-between items-center md:py-4 py-1`}
       >
         <div
           className={`text-secondary ${
@@ -55,22 +55,22 @@ const Menu = () => {
         </div>
         <div
           onClick={() => setShowMenu(!showMenu)}
-          className={`flex bg-leMon w-12 h-12 rounded-full flex-col cursor-pointer z-[1400] 
-          items-center justify-center gap-y-2`}
+          className={`flex bg-leMon w-10 h-10 rounded-full flex-col cursor-pointer z-[1400] 
+          items-center justify-center gap-y-1.5`}
         >
           <div
-            className={`w-6 h-[2px] duration-500 ${
-              showMenu && "rotate-45 translate-y-[10px] duration-500"
+            className={`w-5 h-[2px] duration-500 ${
+              showMenu && "rotate-45 translate-y-[8px] duration-500"
             } bg-secondary`}
           />
           <div
-            className={`w-9 h-[2px] duration-500 bg-secondary ${
+            className={`w-7 h-[2px] duration-500 bg-secondary ${
               showMenu && "translate-x-96 duration-500"
             }`}
           />
           <div
-            className={`w-6 h-[2px] duration-500 ${
-              showMenu && "-rotate-45 translate-y-[-10px] duration-500"
+            className={`w-5 h-[2px] duration-500 ${
+              showMenu && "-rotate-45 translate-y-[-8px] duration-500"
             } bg-secondary`}
           />
         </div>
@@ -87,7 +87,7 @@ const Menu = () => {
         <div
           className={`bg-leMon fixed top-0 left-0 h-full z-[1200] w-full ${
             showMenu
-              ? "clip-active duration-1000"
+              ? "clip-active duration-[1.5s]"
               : "clip-inactive duration-1000"
           }`}
         ></div>

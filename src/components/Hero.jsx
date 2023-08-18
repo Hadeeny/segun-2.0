@@ -12,7 +12,7 @@ const Hero = () => {
   const banner = {
     animate: {
       transition: {
-        delayChildren: 4.4,
+        delayChildren: 1,
         staggerChildren: 0.1,
       },
     },
@@ -37,7 +37,7 @@ const Hero = () => {
     >
       <div className="w-full  flex flex-col justify-center items-start gap-y-2 md:gap-y-6 md:w-1/2">
         <motion.h2
-          transition={{ delay: 5, duration: 1 }}
+          transition={{ delay: 2.1, duration: 1 }}
           // initial={{ y: 80, opacity: 0 }}
           // animate={{ y: 0, opacity: 1 }}
           initial={{
@@ -59,7 +59,7 @@ const Hero = () => {
           className="flex"
         >
           <motion.div
-            transition={{ delay: 5.1, duration: 1 }}
+            transition={{ delay: 2.2, type: "spring", damping: 8, duration: 1 }}
             initial={{
               y: 200,
               clipPath: "polygon(0 0, 0% 0, 0% 0%, 0% 0%)",
@@ -74,7 +74,7 @@ const Hero = () => {
           </motion.div>
         </motion.div>
         <motion.p
-          transition={{ delay: 5.1, duration: 1 }}
+          transition={{ delay: 2.5, duration: 1 }}
           initial={{
             y: 200,
             clipPath: "polygon(0 0, 0% 0, 0% 0%, 0% 0%)",
@@ -91,7 +91,18 @@ const Hero = () => {
           experiences
         </motion.p>
 
-        <a
+        <motion.a
+          transition={{ delay: 3.6, duration: 1, ease: "anticipate" }}
+          // initial={{ y: 80, opacity: 0 }}
+          // animate={{ y: 0, opacity: 1 }}
+          initial={{
+            y: 50,
+            clipPath: "polygon(0 0, 0% 0, 0% 0%, 0% 0%)",
+          }}
+          animate={{
+            y: 0,
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+          }}
           href="#projects"
           className="leading-[7rem] z-10 rounded md:text-xl text-lg mt-[2rem]
         tracking-[0.4rem] duration-500 bg-gradient-to-l
@@ -100,11 +111,16 @@ const Hero = () => {
         h-[2.8rem] items-center relative md:w-[18rem] md:h-[4rem]"
         >
           Projects
-        </a>
+        </motion.a>
       </div>
-      <div className="w-full hidden md:flex justify-center items-center md:w-1/2">
+      <motion.div
+        transition={{ delay: 4.7, duration: 0.6, type: "spring", damping: 8 }}
+        initial={{ x: "100%", opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        className="w-full hidden md:flex justify-center items-center md:w-1/2"
+      >
         {View}
-      </div>
+      </motion.div>
     </motion.section>
   );
 };

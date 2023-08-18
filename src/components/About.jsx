@@ -73,10 +73,13 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-10/12 text-secondary snap-center snap-y snap-mandatory h-screen flex flex-col 
+      className="w-full text-secondary snap-center snap-y snap-mandatory h-screen flex flex-col 
          items-start gap-y-2 md:gap-y-6 mx-auto"
     >
-      <div className="mt-[4rem] flex items-center w-full">
+      <div
+        className="my-[4rem] flex sticky bg-transparent 
+      backdrop-blur-md px-6 md:px-20 py-4 top-0 items-center w-full"
+      >
         <div className="text-[1.5rem] text-rouge">01.</div>
         <motion.div
           variants={banner}
@@ -90,9 +93,9 @@ const About = () => {
             </motion.span>
           ))}
         </motion.div>
-        <div className="h-[0.1rem] bg-leMon w-full"></div>
+        {/* <div className="h-[0.1rem] bg-leMon w-full"></div> */}
       </div>
-      <div className="py-8">
+      <div className="py-8 relative -z-10 w-10/12 mx-auto">
         <p className="text-xl md:max-w-2xl">
           I'm a front-end developer from West Africa with a degree in civil
           engineering. I love building stuffs for the web, it's almost like an

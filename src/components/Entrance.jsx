@@ -41,7 +41,7 @@ const Entrance = () => {
         initial={{ y: 0 }}
         animate={{ y: "-100%" }}
         transition={{
-          delay: 4.5,
+          delay: 1.4,
           duration: 1.1,
         }}
         className={`w-screen h-screen ${

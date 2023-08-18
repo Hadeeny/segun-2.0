@@ -38,7 +38,7 @@ const Socials = () => {
         <motion.li
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 6.4, duration: 0.5 }}
+          transition={{ delay: 3.4, duration: 0.5 }}
         >
           <a href="https://github.com/hadeeny" target="_blank">
             <FaGithub size={25} color={"#42946e"} />
@@ -47,7 +47,7 @@ const Socials = () => {
         <motion.li
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 6, duration: 0.5 }}
+          transition={{ delay: 3.6, duration: 0.5 }}
         >
           <a target="_blank" href="https://twitter.com/segun_deniyi">
             <ImTwitter size={25} color={"#42946e"} />
@@ -56,7 +56,7 @@ const Socials = () => {
         <motion.li
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 5.8, duration: 0.5 }}
+          transition={{ delay: 3.8, duration: 0.5 }}
         >
           <a href="#contact">
             <SiGmail size={25} color={"#42946e"} />
@@ -65,7 +65,7 @@ const Socials = () => {
         <motion.li
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 5.6, duration: 0.5 }}
+          transition={{ delay: 3.9, duration: 0.5 }}
         >
           <a href="https://linkedin.com/in/segundeniyi" target="_blank">
             <GrLinkedinOption size={25} color={"#42946e"} />
@@ -75,7 +75,7 @@ const Socials = () => {
       <motion.div
         initial={{ opacity: 0, height: 0 }}
         animate={{ opacity: 1, height: "10rem" }}
-        transition={{ delay: 5.8, duration: 1 }}
+        transition={{ delay: 4.0, duration: 1.4, type: "spring", damping: 5 }}
         className="w-1 h-[10rem] mt-5 bg-leMon"
       />
     </motion.div>
