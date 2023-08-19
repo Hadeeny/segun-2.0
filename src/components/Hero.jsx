@@ -37,7 +37,7 @@ const Hero = () => {
     >
       <div className="w-full  flex flex-col justify-center items-start gap-y-2 md:gap-y-3 md:w-1/2">
         <motion.h2
-          transition={{ delay: 2.1, duration: 1 }}
+          transition={{ delay: 2.5, duration: 1 }}
           // initial={{ y: 80, opacity: 0 }}
           // animate={{ y: 0, opacity: 1 }}
           initial={{
@@ -59,7 +59,7 @@ const Hero = () => {
           className="flex"
         >
           <motion.div
-            transition={{ delay: 2.2, type: "spring", damping: 8, duration: 1 }}
+            transition={{ delay: 2.5, type: "spring", damping: 8, duration: 1 }}
             initial={{
               y: 200,
               clipPath: "polygon(0 0, 0% 0, 0% 0%, 0% 0%)",
@@ -92,16 +92,18 @@ const Hero = () => {
         </motion.p>
 
         <motion.a
-          transition={{ delay: 3.6, duration: 1, ease: "anticipate" }}
+          transition={{ delay: 4.1, duration: 0.5 }}
           // initial={{ y: 80, opacity: 0 }}
           // animate={{ y: 0, opacity: 1 }}
           initial={{
-            y: 50,
-            clipPath: "polygon(0 0, 0% 0, 0% 0%, 0% 0%)",
+            y: 200,
+            opacity: 0,
+            // clipPath: "polygon(0 0, 0% 0, 0% 0%, 0% 0%)",
           }}
           animate={{
             y: 0,
-            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+            opacity: 1,
+            // clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
           }}
           href="#projects"
           className="px-8 z-10 font-oxanium py-1   

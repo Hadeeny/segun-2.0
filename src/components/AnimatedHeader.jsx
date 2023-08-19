@@ -39,7 +39,7 @@ const AnimatedHeader = ({ headerTitle, itemNum }) => {
             : ""
         } text-rouge duration-1000`}
       >
-        02.
+        {itemNum}
       </div>
       <motion.div
         // variants={banner}
@@ -51,11 +51,7 @@ const AnimatedHeader = ({ headerTitle, itemNum }) => {
             : "text-md"
         } font-bold px-2 pt-1 min-w-max`}
       >
-        {title.split("").map((letter, i) => (
-          <motion.span variants={letterAni} key={i}>
-            {letter}
-          </motion.span>
-        ))}
+        {headerTitle}
       </motion.div>
       {/* <div className="h-[0.1rem] bg-leMon w-full"></div> */}
     </div>
