@@ -107,7 +107,7 @@ const Hero = () => {
           }}
           href="#projects"
           className="px-8 z-10 font-oxanium py-1   
-          tracking-widest before:absolute before:inset-y-0 before:-inset-x-6 before:-z-10 before:text-orange-400 before:bg-leMon rounded-md before:rounded-l-xl md:text-xl text-lg mt-[2rem]
+          tracking-widest before:absolute before:inset-0 before:-z-10 before:text-orange-400 before:bg-leMon rounded-md before:rounded-l-xl md:text-xl text-lg mt-[2rem]
          duration-700 before:duration-500  before:scale-x-0 before:hover:scale-x-100 before:origin-right border-2 border-leMon text-white
           shadow-md flex justify-center
          items-center relative"
