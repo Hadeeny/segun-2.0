@@ -35,7 +35,7 @@ const Hero = () => {
       className="w-10/12 text-white h-screen snap-center flex justify-center md:flex-row flex-col
       mx-auto"
     >
-      <div className="w-full  flex flex-col justify-center items-start gap-y-2 md:gap-y-6 md:w-1/2">
+      <div className="w-full  flex flex-col justify-center items-start gap-y-2 md:gap-y-3 md:w-1/2">
         <motion.h2
           transition={{ delay: 2.1, duration: 1 }}
           // initial={{ y: 80, opacity: 0 }}
