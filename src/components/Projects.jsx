@@ -4,6 +4,7 @@ import { RiGithubFill } from "react-icons/ri";
 import { MdOutlineOpenInNew } from "react-icons/md";
 import { IconContext } from "react-icons";
 import { Link as a } from "react-router-dom";
+import AnimatedHeader from "./AnimatedHeader";
 const Projects = () => {
   const title = "Featured Projects";
 
@@ -41,25 +42,7 @@ const Projects = () => {
       className="text-secondary flex flex-col 
         items-start gap-y-2 md:gap-y-6 mx-auto"
     >
-      <div
-        className="my-[4rem] flex sticky bg-transparent 
-      backdrop-blur-md px-6 z-[300] md:px-20 py-4 top-0 items-center w-full"
-      >
-        <div className="text-[1.5rem]  text-rouge">02.</div>
-        <motion.div
-          variants={banner}
-          initial="initial"
-          whileInView="animate"
-          className="text-[1.5rem] font-oxanium font-bold px-2 min-w-max"
-        >
-          {title.split("").map((letter, i) => (
-            <motion.span variants={letterAni} key={i}>
-              {letter}
-            </motion.span>
-          ))}
-        </motion.div>
-        {/* <div className="h-[0.2rem] bg-leMon w-full"></div> */}
-      </div>
+      <AnimatedHeader headerTitle="Featured Project" itemNum="02" />
       {/* project */}
       <div className="px-4 md:px-14 w-full">
         {myProjects.map((project, i) => {

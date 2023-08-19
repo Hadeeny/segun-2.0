@@ -104,11 +104,11 @@ const Hero = () => {
             clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
           }}
           href="#projects"
-          className="leading-[7rem] z-10 rounded md:text-xl text-lg mt-[2rem]
-        tracking-[0.4rem] duration-500 bg-gradient-to-l
-        md:rounded-lg from-rouge to-cyan-500 text-white
-        hover:tracking-[0.6rem] w-[12rem] shadow-md flex justify-center
-        h-[2.8rem] items-center relative md:w-[18rem] md:h-[4rem]"
+          className="px-8 z-10 font-oxanium py-1   
+          tracking-widest before:absolute before:inset-y-0 before:-inset-x-6 before:-z-10 before:text-orange-400 before:bg-leMon rounded-md before:rounded-l-xl md:text-xl text-lg mt-[2rem]
+         duration-700 before:duration-500  before:scale-x-0 before:hover:scale-x-100 before:origin-right border-2 border-leMon text-white
+          shadow-md flex justify-center
+         items-center relative"
         >
           Projects
         </motion.a>

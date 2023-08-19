@@ -5,35 +5,11 @@ import { ImTwitter } from "react-icons/im";
 import { GrLinkedinOption } from "react-icons/gr";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import useScrollEffect from "../../hooks/useScrollEffect";
 const Menu = () => {
-  const [show, setShow] = useState(true);
   const [showMenu, setShowMenu] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const controlNavbar = () => {
-    if (typeof window !== "undefined") {
-      if (window.scrollY > lastScrollY) {
-        // if scroll down hide the navbar
-        setShow(false);
-      } else {
-        // if scroll up show the navbar
-        setShow(true);
-      }
 
-      // remember current page location to use in the next move
-      setLastScrollY(window.scrollY);
-    }
-  };
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", controlNavbar);
-
-      // cleanup function
-      return () => {
-        window.removeEventListener("scroll", controlNavbar);
-      };
-    }
-  }, [lastScrollY]);
+  const show = useScrollEffect();
 
   return (
     <>
@@ -43,20 +19,28 @@ const Menu = () => {
         animate={{ opacity: 1 }}
         className={`w-11/12  fixed top-4 md:top-1    
         rounded-xl px-2 
-        ${!show && "hidden"}
+        ${!show && "block"}
          left-0 right-0 mx-auto flex z-[1400] justify-between items-center md:py-4 py-1`}
       >
         <div
           className={`text-secondary ${
+            show
+              ? "md:translate-x-12 translate-x-4 -translate-y-4 opacity-100"
+              : "opacity-0"
+          } ${
             showMenu && "text-gray-200"
-          } font-bold font-dancing text-xl`}
+          } font-bold font-dancing text-xl duration-1000`}
         >
           {"<Deniyi/>"}
         </div>
         <div
           onClick={() => setShowMenu(!showMenu)}
-          className={`flex bg-leMon w-10 h-10 rounded-full flex-col cursor-pointer z-[1400] 
-          items-center justify-center gap-y-1.5`}
+          className={`flex bg-leMon ${
+            show
+              ? "translate-x-0 -translate-y-2 opacity-100"
+              : "opacity-0 -translate-x-14"
+          } w-10 h-10 rounded-full flex-col cursor-pointer z-[1400] 
+          items-center duration-1000 justify-center gap-y-1.5`}
         >
           <div
             className={`w-5 h-[2px] duration-500 ${
@@ -87,8 +71,8 @@ const Menu = () => {
         <div
           className={`bg-leMon fixed top-0 left-0 h-full z-[1200] w-full ${
             showMenu
-              ? "clip-active duration-[1.5s]"
-              : "clip-inactive duration-1000"
+              ? "clip-active ease-in-out duration-[1.5s]"
+              : "clip-inactive ease-in-out duration-1000"
           }`}
         ></div>
         <motion.div

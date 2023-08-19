@@ -14,6 +14,7 @@ import typescript from "../image/typescript.svg";
 import bootstrap from "../image/bootstrap.svg";
 import { motion } from "framer-motion";
 import white from "../image/white.jpg";
+import AnimatedHeader from "./AnimatedHeader";
 const About = () => {
   const aboutText = "About Me";
 
@@ -76,25 +77,7 @@ const About = () => {
       className="w-full text-secondary snap-center snap-y snap-mandatory h-screen flex flex-col 
          items-start gap-y-2 md:gap-y-6 mx-auto"
     >
-      <div
-        className="my-[4rem] flex sticky bg-transparent 
-      backdrop-blur-md px-6 md:px-20 py-4 top-0 items-center w-full"
-      >
-        <div className="text-[1.5rem] text-rouge">01.</div>
-        <motion.div
-          variants={banner}
-          initial="initial"
-          whileInView="animate"
-          className="text-[1.5rem]  font-oxanium font-bold px-2 min-w-max"
-        >
-          {aboutText.split("").map((letter, i) => (
-            <motion.span variants={letterAni} key={i}>
-              {letter}
-            </motion.span>
-          ))}
-        </motion.div>
-        {/* <div className="h-[0.1rem] bg-leMon w-full"></div> */}
-      </div>
+      <AnimatedHeader headerTitle="About Me" itemNum="01." />
       <div className="py-8 relative -z-10 w-10/12 mx-auto">
         <p className="text-xl md:max-w-2xl">
           I'm a front-end developer from West Africa with a degree in civil
